@@ -103,6 +103,7 @@ body:not(.editing) .course-content .single-section {
     min-height: 250px;
     display: block;
     text-align: center;
+    background-color: #fff;
 }
 
 .squares .square {
@@ -120,7 +121,7 @@ body:not(.editing) .course-content .single-section {
     width: 100%;
     font-weight: bold;
     margin: 0;
-    color: #fefefe; /* custrm */
+    color: #111;
     font-size: 13px;
     padding: 0;
 }
@@ -128,25 +129,25 @@ body:not(.editing) .course-content .single-section {
 .squares .square:nth-child(1) {
     left: 0;
     top: 0;
-    background-color: #00000010;
+    background-color: #f8f8f8;
 }
 
 .squares .square:nth-child(2) {
     left: 50%;
     top: 0;
-    background-color: #00000015;
+    background-color: #fff;
 }
 
 .squares .square:nth-child(3) {
     left: 0;
     top: 50%;
-    background-color: #00000015;
+    background-color: #fff;
 }
 
 .squares .square:nth-child(4) {
     left: 50%;
     top: 50%;
-    background-color: #00000010;
+    background-color: #f8f8f8;
 }
 
 /* ========================================================================== */
@@ -413,7 +414,9 @@ body:not(.editing)
         width: 33.3%;
         background-color: #111;
         color: #fefefe;
-        border-color: transparent;
+        border-left: 0;
+        border-top: 0;
+        border-bottom: 0;
     }
 
     body:not(.editing) .course-content #section-1 {
