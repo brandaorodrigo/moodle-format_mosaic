@@ -325,23 +325,6 @@
     color: #00000025;
 }
 
-.button_back_course {
-    background: none;
-    border: 0;
-    font-size: 14px;
-    line-height: 25px;
-    position: absolute;
-    right: 22px;
-    top: 66px;
-    z-index: 999;
-}
-
-.button_back_course span.material-symbols-outlined {
-    float: left;
-    font-size: 20;
-    margin-right: 6px;
-}
-
 /* ========================================================================== */
 /* botao entrar/sair da sessao */
 /* ========================================================================== */

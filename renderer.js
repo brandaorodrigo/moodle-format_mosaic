@@ -23,7 +23,7 @@ if (notEditingRenderer) {
         const Back = document.createElement('button');
         Back.className = 'button_back_course';
         Back.onclick = () => history.back();
-        Back.innerHTML = `<span class="material-symbols-outlined">home</span> Voltar para página inicial`;
+        Back.innerHTML = `<i class="icon fa fa-home"></i> Voltar para página inicial`;
         insideCourse.append(Back);
     }
 }
