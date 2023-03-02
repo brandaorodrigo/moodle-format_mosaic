@@ -45,11 +45,11 @@ body#page-course-view-mosaic:not(.editing)
 }
 
 body:not(.editing) .course-content ul.mosaic {
-    position: relative;
-    width: 100vw;
+    margin: 0;
     min-height: calc(100vh - 46px);
     padding: 0;
-    margin: 0;
+    position: relative;
+    width: 100vw;
 }
 
 body:not(.editing) .course-content .single-section {
@@ -62,9 +62,9 @@ body:not(.editing) .course-content .single-section {
 
 .available_percent {
     display: block;
-    width: 160px;
     font-size: 12px;
     font-weight: bold;
+    width: 160px;
 }
 
 .available_percent .percent {
@@ -72,24 +72,24 @@ body:not(.editing) .course-content .single-section {
 }
 
 .available_percent .total {
-    width: 100%;
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-    height: 6px;
-    padding: 0;
-    margin: 0;
-    display: block;
     background: #f2f2f2;
+    border-radius: 4px;
+    display: block;
+    height: 6px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
 }
 
 .available_percent .completed {
-    width: 100%;
-    height: 6px;
-    padding: 0;
-    margin: 0;
-    display: block;
     background: #111;
+    display: block;
+    height: 6px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 /* ========================================================================== */
@@ -97,34 +97,34 @@ body:not(.editing) .course-content .single-section {
 /* ========================================================================== */
 
 .squares {
-    margin: 60px -40px -40px -40px;
-    position: relative;
-    min-height: 250px;
-    display: block;
-    text-align: center;
     background-color: #fff;
+    display: block;
+    margin: 60px -40px -40px -40px;
+    min-height: 250px;
+    position: relative;
+    text-align: center;
     z-index: 99;
 }
 
 .squares .square {
-    position: absolute;
-    display: flex;
     align-items: center;
-    top: 0;
-    width: 50%;
-    height: 50%;
     background-repeat: no-repeat !important;
     background-size: 100% 100% !important;
+    display: flex;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    width: 50%;
 }
 
 .squares .square a {
-    text-align: center;
-    width: 100%;
-    font-weight: bold;
-    margin: 0;
     color: #111;
     font-size: 14px !important;
+    font-weight: bold;
+    margin: 0;
     padding: 0;
+    text-align: center;
+    width: 100%;
 }
 
 .squares .square:nth-child(1) {
@@ -133,14 +133,14 @@ body:not(.editing) .course-content .single-section {
 }
 
 .squares .square:nth-child(2) {
+    background-color: #00000006;
     left: 50%;
     top: 0;
-    background-color: #00000006;
 }
 
 .squares .square:nth-child(3) {
-    left: 0;
     background-color: #00000006;
+    left: 0;
     top: 50%;
 }
 
@@ -154,8 +154,8 @@ body:not(.editing) .course-content .single-section {
 /* ========================================================================== */
 
 body:not(.editing) .course-content ul.mosaic li.section {
-    padding: 40px !important;
     margin: 0;
+    padding: 40px !important;
     position: relative;
 }
 
@@ -173,8 +173,8 @@ body:not(.editing)
 }
 
 body:not(.editing) .course-content ul.mosaic li.section ul.section {
-    padding: 0 !important;
     margin: 0 0 0 22px !important;
+    padding: 0 !important;
 }
 
 body:not(.editing) .course-content .d-flex {
@@ -186,23 +186,23 @@ body:not(.editing) .course-content .section .activity {
 }
 
 body:not(.editing) .course-content .module_badge {
-    padding: 6px;
-    display: inline-block;
-    color: #111;
-    line-height: 1;
     border: 1px solid #111;
+    color: #111;
+    display: inline-block;
     font-size: 12px;
     font-weight: bold;
+    line-height: 1;
     margin: 26px 0 0 0;
+    padding: 6px;
 }
 
 body:not(.editing) .course-content h3 {
-    font-size: 20px !important;
     cursor: pointer;
-    margin: 26px 0 0 0 !important;
+    font-size: 20px !important;
     font-weight: bold !important;
-    padding: 0 !important;
     line-height: 20px !important;
+    margin: 26px 0 0 0 !important;
+    padding: 0 !important;
 }
 
 body:not(.editing) .course-content #section-0 h3 {
@@ -210,11 +210,11 @@ body:not(.editing) .course-content #section-0 h3 {
 }
 
 body:not(.editing) .course-content h4 {
+    border-top: 1px solid #00000030;
     font-size: 14px !important;
+    line-height: 30px !important;
     margin: 8px 0 0 0 !important;
     padding: 10px 0 0 0 !important;
-    line-height: 30px !important;
-    border-top: 1px solid #00000030;
 }
 
 body:not(.editing) .course-content .modtype_label:first-child h4 {
@@ -225,24 +225,24 @@ body:not(.editing) .course-content .modtype_label:first-child h4 {
 body:not(.editing) .course-content h5 {
     font-size: 13px !important;
     font-weight: bold;
-    overflow: hidden;
-    margin: 0 !important;
-    padding: 0 !important;
     line-height: 13px !important;
+    margin: 0 !important;
+    overflow: hidden;
+    padding: 0 !important;
 }
 
 body:not(.editing) .course-content .activity-item.activityinline,
 body:not(.editing) .course-content .activity-item:not(.activityinline) {
-    padding: 0 !important;
     border: 0 !important;
-    margin: 16px 0 0 0 !important;
     font-size: 14px !important;
+    margin: 16px 0 0 0 !important;
+    padding: 0 !important;
 }
 
 body:not(.editing) .course-content div[data-for='sectioninfo'] {
+    font-size: 14px;
     margin: 26px 0 0 0 !important;
     padding: 0 !important;
-    font-size: 14px;
 }
 
 body:not(.editing) .course-content .force-display {
@@ -250,10 +250,10 @@ body:not(.editing) .course-content .force-display {
 }
 
 body:not(.editing) .course-content .available_date {
+    align-items: center;
+    display: table-cell;
     font-size: 12px;
     font-weight: bold;
-    display: table-cell;
-    align-items: center;
     line-height: 24px;
 }
 
@@ -269,8 +269,8 @@ body:not(.editing) .course-content .activitytitle .activityname a {
     background-color: #111;
     color: #ffffff;
     font-size: 13px;
-    padding: 4px 6px;
     margin: 6px 0 6px 26px;
+    padding: 4px 6px;
 }
 
 body:not(.editing)
@@ -278,9 +278,9 @@ body:not(.editing)
     .activitytitle.modtype_resource
     .activityname,
 body:not(.editing) .course-content .activitytitle.modtype_page .activityname {
+    background: none;
     margin: 0;
     padding: 0;
-    background: none;
 }
 
 body:not(.editing)
@@ -290,17 +290,17 @@ body:not(.editing)
     a,
 body:not(.editing) .course-content .activitytitle.modtype_page .activityname a {
     background: none;
-    font-weight: normal;
     color: #111;
+    font-weight: normal;
 }
 
 body:not(.editing)
     .description[data-for='sectioninfo']
     .course-description-item {
     background: none;
-    padding: 0 !important;
-    margin: 0 !important;
     font-size: 14px;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 body:not(.editing)
@@ -317,10 +317,10 @@ body:not(.editing)
 .progress_activity {
     display: block;
     float: right;
-    margin: 0;
-    top: 0;
-    position: absolute;
     left: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
 }
 
 .progress_activity div {
@@ -340,19 +340,19 @@ body:not(.editing)
 }
 
 .button_back_course {
-    z-index: 999;
-    top: 66px;
-    right: 22px;
-    position: absolute;
     background: none;
     border: 0;
     font-size: 14px;
     line-height: 25px;
+    position: absolute;
+    right: 22px;
+    top: 66px;
+    z-index: 999;
 }
 
 .button_back_course span.material-symbols-outlined {
-    font-size: 20;
     float: left;
+    font-size: 20;
     margin-right: 6px;
 }
 
@@ -361,14 +361,14 @@ body:not(.editing)
 /* ========================================================================== */
 
 .button_enter_section {
-    display: none;
     background-color: #111;
+    border: 0;
     color: #fefefe;
+    display: none;
     font-size: 13px;
     font-weight: bold;
-    padding: 6px 12px;
     margin: 26px 0 0 0;
-    border: 0;
+    padding: 6px 12px;
 }
 
 .button_back_section {
@@ -405,51 +405,51 @@ body:not(.editing)
     }
 
     body:not(.editing) .course-content ul.mosaic li.section {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        overflow: auto;
-        height: 100%;
-        z-index: 99;
-        border: 1px solid #f8f8f8;
         background-repeat: no-repeat !important;
         background-size: 100% 100% !important;
+        border: 1px solid #f8f8f8;
+        display: block;
+        height: 100%;
+        left: 0;
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 99;
     }
 
     body:not(.editing) .course-content #section-0 {
-        width: 33.3%;
-        padding: 80px 40px !important;
+        border-bottom: 0;
         border-left: 0;
         border-top: 0;
-        border-bottom: 0;
+        padding: 80px 40px !important;
+        width: 33.3%;
     }
 
     body:not(.editing) .course-content #section-1 {
+        height: 50%;
         left: 33.3%;
         width: 33.3%;
-        height: 50%;
     }
 
     body:not(.editing) .course-content #section-2 {
+        height: 50%;
         left: 66.6%;
         width: 33.3%;
-        height: 50%;
     }
 
     body:not(.editing) .course-content #section-3 {
+        height: 50%;
         left: 33.3%;
         top: 50%;
         width: 33.3%;
-        height: 50%;
     }
 
     body:not(.editing) .course-content #section-4 {
+        height: 50%;
         left: 66.6%;
         top: 50%;
         width: 33.3%;
-        height: 50%;
     }
 
     body:not(.editing) .course-content #section-5,
@@ -460,20 +460,20 @@ body:not(.editing)
     }
 
     body:not(.editing) .course-content .section-open {
-        left: 33.3% !important;
-        width: 66.6% !important;
-        height: 100% !important;
         background-color: #ffffff !important;
-        z-index: 999 !important;
-        top: 0 !important;
+        height: 100% !important;
+        left: 33.3% !important;
         overflow: auto !important;
+        top: 0 !important;
+        width: 66.6% !important;
+        z-index: 999 !important;
     }
 
     body:not(.editing) .course-content .single-section .course-section {
-        top: 0 !important;
-        left: 33.3% !important;
-        width: 67% !important;
         height: 100% !important;
+        left: 33.3% !important;
+        top: 0 !important;
+        width: 67% !important;
     }
 
     body:not(.editing) .course-content .squares {
@@ -490,13 +490,13 @@ body:not(.editing)
     }
 
     body:not(.editing) .course-content .single-section {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
         position: absolute;
         top: 0;
         width: 100vw;
-        height: 100%;
-        padding: 0;
-        overflow: hidden;
-        margin: 0;
     }
 
     body:not(.editing) .course-content .single-section ul.mosaic {

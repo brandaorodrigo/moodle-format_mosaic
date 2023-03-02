@@ -36,12 +36,12 @@ body:not(.editing)
     #topofscroll
     #page-content.main-inner
     #region-main {
-    padding: 26px !important;
-    margin: 0 !important;
     border-radius: 0 !important;
-    width: 100vw !important;
-    overflow: hidden !important;
+    margin: 0 !important;
     max-width: none !important;
+    overflow: hidden !important;
+    padding: 26px !important;
+    width: 100vw !important;
 }
 
 body:not(.editing) .page-header-image,
@@ -82,7 +82,7 @@ body#page-mod-resource-view:not(.editing)
 
 body#page-mod-page-view:not(.editing) .generalbox,
 body#page-mod-resource-view:not(.editing) .generalbox {
-    padding: 0 !important;
     margin: 0 !important;
     min-height: calc(100vh - 48px);
+    padding: 0 !important;
 }
