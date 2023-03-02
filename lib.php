@@ -18,37 +18,41 @@ class format_mosaic extends format_topics
     public function course_format_options($foreditform = false)
     {
         $mosaic = [
-            'color_main',
+            'color',
 
-            'text_square1',
-            'link_square1',
+            'name_q1',
+            'href_q1',
+            'base64_q1',
 
-            'text_square2',
-            'link_square2',
+            'name_q2',
+            'href_q2',
+            'base64_q2',
 
-            'text_square3',
-            'link_square3',
+            'name_q3',
+            'href_q3',
+            'base64_q3',
 
-            'text_square4',
-            'link_square4',
+            'name_q4',
+            'href_q4',
+            'base64_q4',
 
-            'base64_section0',
+            'base64_s0',
 
-            'base64_section1',
-            'base64_section1_hover',
-            'base64_section1_full',
+            'base64_s1',
+            'base64_s1_hover',
+            'base64_s1_full',
 
-            'base64_section2',
-            'base64_section2_hover',
-            'base64_section2_full',
+            'base64_s2',
+            'base64_s2_hover',
+            'base64_s2_full',
 
-            'base64_section3',
-            'base64_section3_hover',
-            'base64_section3_full',
+            'base64_s3',
+            'base64_s3_hover',
+            'base64_s3_full',
 
-            'base64_section4',
-            'base64_section4_hover',
-            'base64_section4_full',
+            'base64_s4',
+            'base64_s4_hover',
+            'base64_s4_full',
         ];
 
         $parent = parent::course_format_options($foreditform);

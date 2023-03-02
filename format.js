@@ -289,6 +289,13 @@ if (notEditing) {
     }
 
     // =========================================================================
+    // coloca squares dentro do topic geral
+    // =========================================================================
+
+    const squares = document.querySelector('#mosaic_squares');
+    document.querySelector('#section-0').append(squares);
+
+    // =========================================================================
     // quando carrega a tela verifica se existe hash de sessao aberta
     // =========================================================================
 
