@@ -57,25 +57,37 @@
 }
 
 /* ========================================================================== */
-/* contador de porcentagem */
+/* cabeçalho do mosaico */
 /* ========================================================================== */
 
-.available_percent {
+.mosaic_header {
+    display: block;
+    height: 25px;
+}
+
+.section-open .mosaic_header {
+    width: calc(100% - 10px);
+}
+
+/* contador de porcentagem */
+
+.mosaic_header .available_percent {
     display: block;
     font-size: 12px;
-    font-weight: bold;
-    width: 160px;
+    font-weight: 800;
+    float: left;
+    width: 36%;
 }
 
-.available_percent .percent {
+.mosaic_header .available_percent .percent {
     display: block;
 }
 
-.available_percent .total {
+.mosaic_header .available_percent .total {
     background: #f2f2f2;
     border-radius: 4px;
     display: block;
-    height: 6px;
+    height: 5px;
     margin: 0;
     overflow: hidden;
     padding: 0;
@@ -83,70 +95,45 @@
     width: 100%;
 }
 
-.available_percent .completed {
+.mosaic_header .available_percent .completed {
     background: #111;
     display: block;
-    height: 6px;
+    height: 5px;
+    border-radius: 0 4px 4px 0;
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
-/* ========================================================================== */
-/* quadrados para a sessao geral */
-/* ========================================================================== */
+/* data de abertura */
 
-.squares {
-    background-color: #fff;
-    display: block;
-    margin: 60px -40px -40px -40px;
-    min-height: 250px;
-    position: relative;
-    text-align: center;
-    z-index: 99;
-}
-
-.squares .square {
+.mosaic_header .available_date {
     align-items: center;
-    background-repeat: no-repeat !important;
-    background-size: 100% 100% !important;
-    display: flex;
-    height: 50%;
-    position: absolute;
-    top: 0;
-    width: 50%;
+    height: 18px;
+    display: table-cell;
+    font-size: 12px;
+    margin-top: 10px;
+    float: right;
+    font-weight: 400;
+    line-height: 18px;
 }
 
-.squares .square a {
+.mosaic_header .available_date .icon {
+    margin: 0 0 0 5px;
+    float: right;
+}
+
+/* distintivo do modulo */
+
+.module_badge {
+    border: 1px solid #111;
     color: #111;
-    font-size: 14px !important;
+    display: inline-block;
+    font-size: 12px;
     font-weight: bold;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    width: 100%;
-}
-
-.squares .square:nth-child(1) {
-    left: 0;
-    top: 0;
-}
-
-.squares .square:nth-child(2) {
-    background-color: #00000006;
-    left: 50%;
-    top: 0;
-}
-
-.squares .square:nth-child(3) {
-    background-color: #00000006;
-    left: 0;
-    top: 50%;
-}
-
-.squares .square:nth-child(4) {
-    left: 50%;
-    top: 50%;
+    line-height: 1;
+    margin: 30px 0 0 0;
+    padding: 4px 6px;
 }
 
 /* ========================================================================== */
@@ -155,7 +142,7 @@
 
 .course-content ul.mosaic li.section {
     margin: 0;
-    padding: 40px !important;
+    padding: 2% 4% !important;
     position: relative;
 }
 
@@ -181,28 +168,20 @@
     padding: 0;
 }
 
-.course-content .module_badge {
-    border: 1px solid #111;
-    color: #111;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 1;
-    margin: 26px 0 0 0;
-    padding: 6px;
-}
-
 .course-content h3 {
     cursor: pointer;
-    font-size: 20px !important;
-    font-weight: bold !important;
+    font-size: 19px !important;
+    font-weight: 500 !important;
     line-height: 20px !important;
-    margin: 26px 0 0 0 !important;
+    margin: 16px 0 0 0 !important;
     padding: 0 !important;
 }
 
 .course-content #section-0 h3 {
     font-size: 42px !important;
+    line-height: 48px !important;
+    font-weight: 900 !important;
+    letter-spacing: -1.5px;
 }
 
 .course-content h4 {
@@ -237,24 +216,12 @@
 
 .course-content div[data-for='sectioninfo'] {
     font-size: 14px;
-    margin: 26px 0 0 0 !important;
+    margin: 16px 0 0 0 !important;
     padding: 0 !important;
 }
 
 .course-content .force-display {
     display: block !important;
-}
-
-.course-content .available_date {
-    align-items: center;
-    display: table-cell;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 24px;
-}
-
-.course-content .available_date .icon {
-    margin: 0 0 0 5px;
 }
 
 .course-content .availabilityinfo.course-description-item {
@@ -334,10 +301,14 @@
     border: 0;
     color: #fefefe;
     display: none;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
-    margin: 26px 0 0 0;
-    padding: 6px 12px;
+    margin: 36px 0 0 0;
+    padding: 6px 22px;
+}
+
+.button_enter_section:hover {
+    opacity: 0.8;
 }
 
 .button_back_section {
@@ -354,6 +325,63 @@
 
 .button_back_section span {
     font-size: 28px;
+}
+
+/* ========================================================================== */
+/* quadrados para a sessao geral */
+/* ========================================================================== */
+
+.squares {
+    background-color: #fff;
+    display: block;
+    margin: 60px -40px -40px -40px;
+    min-height: 250px;
+    position: relative;
+    text-align: center;
+    z-index: 99;
+}
+
+.squares .square {
+    align-items: center;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    display: flex;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    width: 50%;
+}
+
+.squares .square a {
+    color: #111;
+    font-size: 14px !important;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.squares .square:nth-child(1) {
+    left: 0;
+    top: 0;
+}
+
+.squares .square:nth-child(2) {
+    background-color: #00000006;
+    left: 50%;
+    top: 0;
+}
+
+.squares .square:nth-child(3) {
+    background-color: #00000006;
+    left: 0;
+    top: 50%;
+}
+
+.squares .square:nth-child(4) {
+    left: 50%;
+    top: 50%;
 }
 
 /* ========================================================================== */
@@ -374,6 +402,7 @@
         background-repeat: no-repeat !important;
         background-size: 100% 100% !important;
         border: 1px solid #f8f8f8;
+        background: #fff;
         display: block;
         height: 100%;
         left: 0;
@@ -382,13 +411,14 @@
         top: 0;
         width: 100%;
         z-index: 99;
+        transition: width 0.3s, height 0.3s;
     }
 
     #section-0 {
         border-bottom: 0;
         border-left: 0;
         border-top: 0;
-        padding: 80px 40px !important;
+        padding-top: 1% !important;
         width: 33.3%;
     }
 
@@ -427,6 +457,7 @@
 
     .course-content .section-open {
         background-color: #ffffff !important;
+        box-shadow: 4px 4px 5px 0px #00000020;
         height: 100% !important;
         left: 33.3% !important;
         overflow: auto !important;
@@ -443,7 +474,6 @@
     }
 
     .course-content .squares {
-        background: none;
         bottom: 0;
         display: block;
         height: 50%;

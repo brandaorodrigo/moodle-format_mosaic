@@ -51,7 +51,9 @@ const appendAvailablePercent = (value, element) => {
     html.innerHTML = `
         ${value}%
         <div class="total">
-            <div class="completed" style="width:${value}%"></div>
+            <div class="completed" style="width:${
+                value != 0 ? value : 3
+            }%"></div>
         </div>
         `;
     element.prepend(html);
@@ -74,6 +76,8 @@ const appendActivityPercent = (pill, element) => {
         });
         const value = Math.ceil((100 / total) * completed);
         appendAvailablePercent(value, element);
+    } else {
+        appendAvailablePercent(0, element);
     }
 };
 
@@ -84,16 +88,49 @@ const appendActivityPercent = (pill, element) => {
 const courseSection = document.querySelectorAll('.course-section');
 if (courseSection && courseSection.length) {
     courseSection.forEach((each) => {
+        const modules = each.getAttribute('data-number');
+        if (modules == 0) return;
+
         // =====================================================================
         // cria div do numero do modulo
         // =====================================================================
 
-        const modules = each.getAttribute('data-number');
-        if (modules > 0) {
-            const Div = document.createElement('div');
-            Div.className = 'module_badge';
-            Div.innerHTML = 'Modulo ' + modules;
-            each.prepend(Div);
+        const Div = document.createElement('div');
+        Div.className = 'module_badge';
+        Div.innerHTML = 'Modulo ' + modules;
+        each.prepend(Div);
+
+        // =====================================================================
+        // cria div de cabecalho do mosaico
+        // =====================================================================
+
+        const Header = document.createElement('div');
+        Header.className = 'mosaic_header';
+        each.prepend(Header);
+
+        // =====================================================================
+        // calcula porcentagem concluida dentro e fora da sessao
+        // =====================================================================
+
+        const activity_count = each.querySelectorAll('span.activity-count');
+        const pill = each.querySelectorAll('.badge-pill:last-child strong');
+
+        if (activity_count && activity_count.length) {
+            activity_count.forEach((e) => {
+                const inner = e.innerHTML;
+                if (inner.indexOf('Progresso:') !== -1) {
+                    const numbers = inner
+                        .replace('Progresso: ', '')
+                        .split(' / ')
+                        .map((e) => Number(e));
+                    const value = Math.ceil((100 / numbers[1]) * numbers[0]);
+                    appendAvailablePercent(value, Header);
+                }
+            });
+        } else if (pill && pill.length) {
+            appendActivityPercent(pill, Header);
+        } else {
+            appendActivityPercent(pill, Header);
         }
 
         // =====================================================================
@@ -108,30 +145,7 @@ if (courseSection && courseSection.length) {
             Div.className = 'available_date';
             Div.innerHTML =
                 date.innerHTML + `<i class="icon fa fa-lock fa-fw"></i>`;
-            each.prepend(Div);
-        }
-
-        // =====================================================================
-        // calcula porcentagem concluida dentro e fora da sessao
-        // =====================================================================
-
-        const activity_count = each.querySelectorAll('span.activity-count');
-        if (activity_count && activity_count.length) {
-            activity_count.forEach((e) => {
-                const inner = e.innerHTML;
-                if (inner.indexOf('Progresso:') !== -1) {
-                    const numbers = inner
-                        .replace('Progresso: ', '')
-                        .split(' / ')
-                        .map((e) => Number(e));
-                    const value = Math.ceil((100 / numbers[1]) * numbers[0]);
-                    appendAvailablePercent(value, each);
-                }
-            });
-        }
-        const pill = each.querySelectorAll('.badge-pill:last-child strong');
-        if (pill && pill.length) {
-            appendActivityPercent(pill, each);
+            Header.append(Div);
         }
 
         // =====================================================================
