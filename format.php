@@ -15,6 +15,12 @@ function url($name, $id)
 
 echo '<style>
 
+body:not(.editing) .available_percent .completed,
+body:not(.editing) .course-content #section-0,
+body:not(.editing) .button_enter_section {
+    background-color: ' . $course->color_main . ' !important;
+}
+
 body:not(.editing) .course-content #section-0 {
     background-color: ' . $course->color_main . ' !important;
     background-image: url(' . url('base64_section0', $course->id) . ');

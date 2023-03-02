@@ -1,0 +1,88 @@
+/* ========================================================================== */
+/* barra de rolagem */
+/* ========================================================================== */
+
+* ::-webkit-scrollbar {
+    width: 6px;
+}
+
+* ::-webkit-scrollbar-track {
+    background: #00000008;
+    border-radius: 0;
+}
+
+* ::-webkit-scrollbar-thumb {
+    background-color: #00000020;
+    border-radius: 0;
+}
+
+/* ========================================================================== */
+/* tema com largura 100% geral */
+/* ========================================================================== */
+
+body:not(.editing) #page.drawers,
+body:not(.editing) #page.drawers.show-drawer-left {
+    height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body:not(.editing) #page.drawers #topofscroll #page-content.main-inner {
+    overflow: hidden;
+}
+
+body:not(.editing)
+    #page.drawers
+    #topofscroll
+    #page-content.main-inner
+    #region-main {
+    padding: 26px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    width: 100vw !important;
+    overflow: hidden !important;
+    max-width: none !important;
+}
+
+body:not(.editing) .page-header-image,
+body:not(.editing) #page-footer,
+body:not(.editing) .drawer-toggles .drawer-left-toggle {
+    display: none;
+}
+
+/* ========================================================================== */
+/* modulo de pagina */
+/* ========================================================================== */
+
+body#page-mod-page-view:not(.editing) #page-header,
+body#page-mod-page-view:not(.editing) #page-footer,
+body#page-mod-page-view:not(.editing) .secondary-navigation,
+body#page-mod-page-view:not(.editing) .activity-header,
+body#page-mod-page-view:not(.editing) .modified,
+body#page-mod-resource-view:not(.editing) #page-header,
+body#page-mod-resource-view:not(.editing) #page-footer,
+body#page-mod-resource-view:not(.editing) .secondary-navigation,
+body#page-mod-resource-view:not(.editing) .activity-header,
+body#page-mod-resource-view:not(.editing) .modified {
+    display: none;
+}
+
+body#page-mod-page-view:not(.editing)
+    #page.drawers
+    #topofscroll
+    #page-content.main-inner
+    #region-main,
+body#page-mod-resource-view:not(.editing)
+    #page.drawers
+    #topofscroll
+    #page-content.main-inner
+    #region-main {
+    padding: 0 !important;
+}
+
+body#page-mod-page-view:not(.editing) .generalbox,
+body#page-mod-resource-view:not(.editing) .generalbox {
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: calc(100vh - 48px);
+}

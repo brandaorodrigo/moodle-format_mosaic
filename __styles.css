@@ -1,94 +1,5 @@
 /* ========================================================================== */
-/* barra de rolagem geral */
-/* ========================================================================== */
-
-* ::-webkit-scrollbar {
-    width: 6px;
-}
-
-* ::-webkit-scrollbar-track {
-    background: #00000035;
-    border-radius: 0;
-}
-
-* ::-webkit-scrollbar-thumb {
-    background-color: #00000050;
-    border-radius: 0;
-}
-
-/* ========================================================================== */
-/* tema com largura 100% geral */
-/* ========================================================================== */
-
-body:not(.editing) #page.drawers,
-body:not(.editing) #page.drawers.show-drawer-left {
-    height: auto;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-body:not(.editing) #page.drawers #topofscroll #page-content.main-inner {
-    overflow: hidden;
-}
-
-body:not(.editing)
-    #page.drawers
-    #topofscroll
-    #page-content.main-inner
-    #region-main {
-    padding: 26px !important;
-    margin: 0 !important;
-    border-radius: 0 !important;
-    width: 100vw !important;
-    overflow: hidden !important;
-    max-width: none !important;
-}
-
-body:not(.editing) .page-header-image,
-body:not(.editing) #page-footer,
-body:not(.editing) .drawer-toggles .drawer-left-toggle {
-    display: none;
-}
-
-/* ========================================================================== */
-/* modulo de pagina */
-/* ========================================================================== */
-
-body#page-mod-page-view:not(.editing) #page-header,
-body#page-mod-page-view:not(.editing) #page-footer,
-body#page-mod-page-view:not(.editing) .secondary-navigation,
-body#page-mod-page-view:not(.editing) .activity-header,
-body#page-mod-page-view:not(.editing) .modified,
-body#page-mod-resource-view:not(.editing) #page-header,
-body#page-mod-resource-view:not(.editing) #page-footer,
-body#page-mod-resource-view:not(.editing) .secondary-navigation,
-body#page-mod-resource-view:not(.editing) .activity-header,
-body#page-mod-resource-view:not(.editing) .modified {
-    display: none;
-}
-
-body#page-mod-page-view:not(.editing)
-    #page.drawers
-    #topofscroll
-    #page-content.main-inner
-    #region-main,
-body#page-mod-resource-view:not(.editing)
-    #page.drawers
-    #topofscroll
-    #page-content.main-inner
-    #region-main {
-    padding: 0 !important;
-}
-
-body#page-mod-page-view:not(.editing) .generalbox,
-body#page-mod-resource-view:not(.editing) .generalbox {
-    padding: 0 !important;
-    margin: 0 !important;
-    min-height: calc(100vh - 48px);
-}
-
-/* ========================================================================== */
-/* esconde elementos que nao serao usados no layout */
+/* remove elementos nao usados no mosaico */
 /* ========================================================================== */
 
 body#page-course-view-mosaic:not(.editing) #collapsesections,
@@ -152,7 +63,6 @@ body:not(.editing) .course-content .single-section {
 .available_percent {
     display: block;
     width: 160px;
-
     font-size: 12px;
     font-weight: bold;
 }
@@ -163,12 +73,14 @@ body:not(.editing) .course-content .single-section {
 
 .available_percent .total {
     width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
     position: relative;
     height: 6px;
     padding: 0;
     margin: 0;
     display: block;
-    background: #00000035;
+    background: #f2f2f2;
 }
 
 .available_percent .completed {
@@ -177,7 +89,7 @@ body:not(.editing) .course-content .single-section {
     padding: 0;
     margin: 0;
     display: block;
-    background: #000000;
+    background: #111;
 }
 
 /* ========================================================================== */
@@ -208,7 +120,7 @@ body:not(.editing) .course-content .single-section {
     width: 100%;
     font-weight: bold;
     margin: 0;
-    color: #000000;
+    color: #fefefe; /* custrm */
     font-size: 13px;
     padding: 0;
 }
@@ -216,25 +128,25 @@ body:not(.editing) .course-content .single-section {
 .squares .square:nth-child(1) {
     left: 0;
     top: 0;
-    background-color: #00000050;
+    background-color: #00000010;
 }
 
 .squares .square:nth-child(2) {
     left: 50%;
     top: 0;
-    background-color: #00000030;
+    background-color: #00000015;
 }
 
 .squares .square:nth-child(3) {
     left: 0;
     top: 50%;
-    background-color: #00000030;
+    background-color: #00000015;
 }
 
 .squares .square:nth-child(4) {
     left: 50%;
     top: 50%;
-    background-color: #00000050;
+    background-color: #00000010;
 }
 
 /* ========================================================================== */
@@ -245,6 +157,10 @@ body:not(.editing) .course-content ul.mosaic li.section {
     padding: 40px !important;
     margin: 0;
     position: relative;
+}
+
+body:not(.editing) .course-content ul.mosaic li.section#section-0 {
+    padding: 80px 40px !important;
 }
 
 body:not(.editing) .course-content ul.mosaic li.section ul.section {
@@ -263,9 +179,9 @@ body:not(.editing) .course-content .section .activity {
 body:not(.editing) .course-content .module_badge {
     padding: 6px;
     display: inline-block;
-    color: #000000;
+    color: #111;
     line-height: 1;
-    border: 1px solid #000000;
+    border: 1px solid #111;
     font-size: 12px;
     font-weight: bold;
     margin: 26px 0 0 0;
@@ -278,6 +194,10 @@ body:not(.editing) .course-content h3 {
     font-weight: bold !important;
     padding: 0 !important;
     line-height: 20px !important;
+}
+
+body:not(.editing) .course-content #section-0 h3 {
+    font-size: 42px !important;
 }
 
 body:not(.editing) .course-content h4 {
@@ -337,7 +257,7 @@ body:not(.editing) .course-content .availabilityinfo.course-description-item {
 }
 
 body:not(.editing) .course-content .activitytitle .activityname a {
-    background-color: #000000;
+    background-color: #111;
     color: #ffffff;
     font-size: 13px;
     padding: 4px 6px;
@@ -362,7 +282,7 @@ body:not(.editing)
 body:not(.editing) .course-content .activitytitle.modtype_page .activityname a {
     background: none;
     font-weight: normal;
-    color: #000000;
+    color: #111;
 }
 
 body:not(.editing)
@@ -399,11 +319,11 @@ body:not(.editing)
 }
 
 .progress_activity .enter {
-    color: #000000;
+    color: #111;
 }
 
 .progress_activity .completed {
-    color: #000000;
+    color: #111;
 }
 
 .progress_activity .incomplete {
@@ -428,12 +348,34 @@ body:not(.editing)
 }
 
 /* ========================================================================== */
-/* layout mobile */
-/* ========================================w================================== */
+/* botao entrar/sair da sessao */
+/* ========================================================================== */
 
-.button_enter_section,
-.button_back_section {
+.button_enter_section {
     display: none;
+    background-color: #111;
+    color: #fefefe;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 12px;
+    margin: 26px 0 0 0;
+    border: 0;
+}
+
+.button_back_section {
+    background: none;
+    border: 0;
+    display: none;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+}
+
+.button_back_section span {
+    font-size: 28px;
 }
 
 /* ========================================================================== */
@@ -462,28 +404,28 @@ body:not(.editing)
         overflow: auto;
         height: 100%;
         z-index: 99;
-        border: 0 !important;
+        border: 1px solid #f8f8f8;
         background-repeat: no-repeat !important;
         background-size: 100% 100% !important;
     }
 
     body:not(.editing) .course-content #section-0 {
         width: 33.3%;
-        background-color: #8c11f1;
+        background-color: #111;
+        color: #fefefe;
+        border-color: transparent;
     }
 
     body:not(.editing) .course-content #section-1 {
         left: 33.3%;
         width: 33.3%;
         height: 50%;
-        background-color: #d2f319;
     }
 
     body:not(.editing) .course-content #section-2 {
         left: 66.6%;
         width: 33.3%;
         height: 50%;
-        background-color: #ecff7f;
     }
 
     body:not(.editing) .course-content #section-3 {
@@ -491,7 +433,6 @@ body:not(.editing)
         top: 50%;
         width: 33.3%;
         height: 50%;
-        background-color: #ecff7f;
     }
 
     body:not(.editing) .course-content #section-4 {
@@ -499,7 +440,6 @@ body:not(.editing)
         top: 50%;
         width: 33.3%;
         height: 50%;
-        background-color: #d2f319;
     }
 
     body:not(.editing) .course-content #section-5,
@@ -574,29 +514,6 @@ body:not(.editing)
 
     .button_enter_section {
         display: block;
-        background-color: #000000;
-        color: #ffffff;
-        font-size: 13px;
-        font-weight: bold;
-        padding: 6px 12px;
-        margin: 26px 0 0 0;
-        border: 0;
-    }
-
-    .button_back_section {
-        background: none;
-        border: 0;
-        display: none;
-        line-height: 1;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        right: 24px;
-        top: 24px;
-    }
-
-    .button_back_section span {
-        font-size: 28px;
     }
 
     .section-open .button_back_section,

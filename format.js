@@ -1,3 +1,10 @@
+const theme = document.createElement('link');
+theme.rel = 'stylesheet';
+theme.type = 'text/css';
+theme.href = '/course/format/mosaic/__theme.css';
+theme.media = 'all';
+document.body.appendChild(theme);
+
 const styles = document.createElement('link');
 styles.rel = 'stylesheet';
 styles.type = 'text/css';
