@@ -1,0 +1,628 @@
+/* ========================================================================== */
+/* barra de rolagem geral */
+/* ========================================================================== */
+
+* ::-webkit-scrollbar {
+    width: 6px;
+}
+
+* ::-webkit-scrollbar-track {
+    background: #00000035;
+    border-radius: 0;
+}
+
+* ::-webkit-scrollbar-thumb {
+    background-color: #00000050;
+    border-radius: 0;
+}
+
+/* ========================================================================== */
+/* tema com largura 100% geral */
+/* ========================================================================== */
+
+body:not(.editing) #page.drawers,
+body:not(.editing) #page.drawers.show-drawer-left {
+    height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body:not(.editing) #page.drawers #topofscroll #page-content.main-inner {
+    overflow: hidden;
+}
+
+body:not(.editing)
+    #page.drawers
+    #topofscroll
+    #page-content.main-inner
+    #region-main {
+    padding: 26px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    width: 100vw !important;
+    overflow: hidden !important;
+    max-width: none !important;
+}
+
+body:not(.editing) .page-header-image,
+body:not(.editing) #page-footer,
+body:not(.editing) .drawer-toggles .drawer-left-toggle {
+    display: none;
+}
+
+/* ========================================================================== */
+/* modulo de pagina */
+/* ========================================================================== */
+
+body#page-mod-page-view:not(.editing) #page-header,
+body#page-mod-page-view:not(.editing) #page-footer,
+body#page-mod-page-view:not(.editing) .secondary-navigation,
+body#page-mod-page-view:not(.editing) .activity-header,
+body#page-mod-page-view:not(.editing) .modified,
+body#page-mod-resource-view:not(.editing) #page-header,
+body#page-mod-resource-view:not(.editing) #page-footer,
+body#page-mod-resource-view:not(.editing) .secondary-navigation,
+body#page-mod-resource-view:not(.editing) .activity-header,
+body#page-mod-resource-view:not(.editing) .modified {
+    display: none;
+}
+
+body#page-mod-page-view:not(.editing)
+    #page.drawers
+    #topofscroll
+    #page-content.main-inner
+    #region-main,
+body#page-mod-resource-view:not(.editing)
+    #page.drawers
+    #topofscroll
+    #page-content.main-inner
+    #region-main {
+    padding: 0 !important;
+}
+
+body#page-mod-page-view:not(.editing) .generalbox,
+body#page-mod-resource-view:not(.editing) .generalbox {
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: calc(100vh - 48px);
+}
+
+/* ========================================================================== */
+/* esconde elementos que nao serao usados no layout */
+/* ========================================================================== */
+
+body#page-course-view-mosaic:not(.editing) #collapsesections,
+body#page-course-view-mosaic:not(.editing) #page-footer,
+body#page-course-view-mosaic:not(.editing) #maincontent,
+body#page-course-view-mosaic:not(.editing) #page-header,
+body#page-course-view-mosaic:not(.editing) .drawer.drawer-left,
+body#page-course-view-mosaic:not(.editing) .course-section-header .icon,
+body#page-course-view-mosaic:not(.editing) .drawer-toggles .drawer-left-toggle,
+body#page-course-view-mosaic:not(.editing) .icons-collapse-expand,
+body#page-course-view-mosaic:not(.editing) .section-summary-activities,
+body#page-course-view-mosaic:not(.editing) .modal-backdrop.show,
+body#page-course-view-mosaic:not(.editing) .secondary-navigation,
+body#page-course-view-mosaic:not(.editing) .section_availability,
+body#page-course-view-mosaic:not(.editing) .activityiconcontainer.courseicon,
+body#page-course-view-mosaic:not(.editing) [data-region='completion-info'],
+body#page-course-view-mosaic:not(.editing)
+    .activity-item
+    .activitytitle
+    .media-body
+    .text-uppercase.small {
+    display: none !important;
+}
+
+/* ========================================================================== */
+/* esconde pagina inteira até terminar o carregamento */
+/* ========================================================================== */
+
+body#page-course-view-mosaic:not(.editing) #page-content {
+    display: none;
+}
+
+/* ========================================================================== */
+/* formato de curso mosaico */
+/* ========================================================================== */
+
+body#page-course-view-mosaic:not(.editing)
+    #page.drawers
+    #topofscroll
+    #page-content.main-inner
+    #region-main {
+    padding: 0 !important;
+}
+
+body:not(.editing) .course-content ul.mosaic {
+    position: relative;
+    width: 100vw;
+    min-height: calc(100vh - 46px);
+    padding: 0;
+    margin: 0;
+}
+
+body:not(.editing) .course-content .single-section {
+    margin: 0;
+}
+
+/* ========================================================================== */
+/* contador de porcentagem */
+/* ========================================================================== */
+
+.available_percent {
+    display: block;
+    width: 160px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.available_percent .percent {
+    display: block;
+}
+
+.available_percent .total {
+    width: 100%;
+    position: relative;
+    height: 6px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    background: #00000035;
+}
+
+.available_percent .completed {
+    width: 100%;
+    height: 6px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    background: #000000;
+}
+
+/* ========================================================================== */
+/* quadrados para a sessao geral */
+/* ========================================================================== */
+
+.squares {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    min-height: 250px;
+    display: block;
+    text-align: center;
+}
+
+.squares .square {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+}
+
+.squares .square p {
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    margin: 0;
+    color: #000000;
+    font-size: 13px;
+    padding: 0;
+}
+
+.squares .square:nth-child(1) {
+    left: 0;
+    top: 0;
+    background-color: #00000050;
+}
+
+.squares .square:nth-child(2) {
+    left: 50%;
+    top: 0;
+    background-color: #00000030;
+}
+
+.squares .square:nth-child(3) {
+    left: 0;
+    top: 50%;
+    background-color: #00000030;
+}
+
+.squares .square:nth-child(4) {
+    left: 50%;
+    top: 50%;
+    background-color: #00000050;
+}
+
+/* ========================================================================== */
+/* sessoes */
+/* ========================================================================== */
+
+body:not(.editing) .course-content ul.mosaic li.section {
+    padding: 40px !important;
+    margin: 0;
+    position: relative;
+}
+
+body:not(.editing) .course-content ul.mosaic li.section ul.section {
+    padding: 0 !important;
+    margin: 0 0 0 22px !important;
+}
+
+body:not(.editing) .course-content .d-flex {
+    padding: 0 !important;
+}
+
+body:not(.editing) .course-content .section .activity {
+    padding: 0;
+}
+
+body:not(.editing) .course-content .module_badge {
+    padding: 6px;
+    display: inline-block;
+    color: #000000;
+    line-height: 1;
+    border: 1px solid #000000;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 26px 0 0 0;
+}
+
+body:not(.editing) .course-content h3 {
+    font-size: 20px !important;
+    cursor: pointer;
+    margin: 26px 0 0 0 !important;
+    font-weight: bold !important;
+    padding: 0 !important;
+    line-height: 20px !important;
+}
+
+body:not(.editing) .course-content h4 {
+    font-size: 14px !important;
+    margin: 8px 0 0 0 !important;
+    padding: 10px 0 0 0 !important;
+    line-height: 30px !important;
+    border-top: 1px solid #00000030;
+}
+
+body:not(.editing) .course-content .modtype_label:first-child h4 {
+    border: 0;
+    margin: 0 !important;
+}
+
+body:not(.editing) .course-content h5 {
+    font-size: 13px !important;
+    font-weight: bold;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 13px !important;
+}
+
+body:not(.editing) .course-content .activity-item.activityinline,
+body:not(.editing) .course-content .activity-item:not(.activityinline) {
+    padding: 0 !important;
+    border: 0 !important;
+    margin: 16px 0 0 0 !important;
+    font-size: 14px !important;
+}
+
+body:not(.editing) .course-content div[data-for='sectioninfo'] {
+    margin: 26px 0 0 0 !important;
+    padding: 0 !important;
+    font-size: 14px;
+}
+
+body:not(.editing) .course-content .force-display {
+    display: block !important;
+}
+
+body:not(.editing) .course-content .available_date {
+    font-size: 12px;
+    font-weight: bold;
+    display: table-cell;
+    align-items: center;
+    line-height: 24px;
+}
+
+body:not(.editing) .course-content .available_date .icon {
+    margin: 0 0 0 5px;
+}
+
+body:not(.editing) .course-content .availabilityinfo.course-description-item {
+    padding: 6px;
+}
+
+body:not(.editing) .course-content .activitytitle .activityname a {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 4px 6px;
+    margin: 6px 0 6px 26px;
+}
+
+body:not(.editing)
+    .course-content
+    .activitytitle.modtype_resource
+    .activityname,
+body:not(.editing) .course-content .activitytitle.modtype_page .activityname {
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+body:not(.editing)
+    .course-content
+    .activitytitle.modtype_resource
+    .activityname
+    a,
+body:not(.editing) .course-content .activitytitle.modtype_page .activityname a {
+    background: none;
+    font-weight: normal;
+    color: #000000;
+}
+
+body:not(.editing)
+    .description[data-for='sectioninfo']
+    .course-description-item {
+    background: none;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 14px;
+}
+
+body:not(.editing)
+    .description[data-for='sectioninfo']
+    .course-description-item
+    .description-inner {
+    border: 0 !important;
+}
+
+/* ========================================================================== */
+/* progresso das atividades */
+/* ========================================================================== */
+
+.progress_activity {
+    display: block;
+    float: right;
+    margin: 0;
+    top: 0;
+    position: absolute;
+    left: 0;
+}
+
+.progress_activity div {
+    display: inline-block;
+}
+
+.progress_activity .enter {
+    color: #000000;
+}
+
+.progress_activity .completed {
+    color: #000000;
+}
+
+.progress_activity .incomplete {
+    color: #00000025;
+}
+
+.button_back_course {
+    z-index: 999;
+    top: 66px;
+    right: 22px;
+    position: absolute;
+    background: none;
+    border: 0;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.button_back_course span.material-symbols-outlined {
+    font-size: 20;
+    float: left;
+    margin-right: 6px;
+}
+
+/* ========================================================================== */
+/* layout mobile */
+/* ========================================w================================== */
+
+.button_enter_section,
+.button_back_section {
+    display: none;
+}
+
+/* ========================================================================== */
+/* layout desktop */
+/* ========================================================================== */
+
+@media (min-width: 960px) {
+    body:not(.editing) .course-content .course-description-item.summarytext {
+        max-height: 128px;
+        overflow: auto;
+    }
+
+    body:not(.editing)
+        .course-content
+        #section-0
+        .course-description-item.summarytext {
+        max-height: none;
+    }
+
+    body:not(.editing) .course-content ul.mosaic li.section {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        overflow: auto;
+        height: 100%;
+        z-index: 99;
+        border: 0 !important;
+        background-repeat: no-repeat !important;
+        background-size: 100% 100% !important;
+    }
+
+    body:not(.editing) .course-content #section-0 {
+        width: 33.3%;
+        background-color: #8c11f1;
+    }
+
+    body:not(.editing) .course-content #section-1 {
+        left: 33.3%;
+        width: 33.3%;
+        height: 50%;
+        background-color: #d2f319;
+    }
+
+    body:not(.editing) .course-content #section-2 {
+        left: 66.6%;
+        width: 33.3%;
+        height: 50%;
+        background-color: #ecff7f;
+    }
+
+    body:not(.editing) .course-content #section-3 {
+        left: 33.3%;
+        top: 50%;
+        width: 33.3%;
+        height: 50%;
+        background-color: #ecff7f;
+    }
+
+    body:not(.editing) .course-content #section-4 {
+        left: 66.6%;
+        top: 50%;
+        width: 33.3%;
+        height: 50%;
+        background-color: #d2f319;
+    }
+
+    body:not(.editing) .course-content #section-5,
+    body:not(.editing) .course-content #section-6,
+    body:not(.editing) .course-content #section-7,
+    body:not(.editing) .course-content #section-8 {
+        display: none;
+    }
+
+    body:not(.editing) .course-content .section-open {
+        left: 33.3% !important;
+        width: 66.6% !important;
+        height: 100% !important;
+        background-color: #ffffff !important;
+        z-index: 999 !important;
+        top: 0 !important;
+        overflow: auto !important;
+    }
+
+    body:not(.editing) .course-content .single-section .course-section {
+        top: 0 !important;
+        left: 33.3% !important;
+        width: 67% !important;
+        height: 100% !important;
+    }
+
+    body:not(.editing) .course-content .squares {
+        position: absolute;
+        left: 0;
+        display: block;
+        bottom: 0;
+    }
+
+    body:not(.editing) .course-content .single-section {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    body:not(.editing) .course-content .single-section ul.mosaic {
+        position: absolute;
+        top: 0;
+        width: calc(100% - 6px);
+    }
+
+    body:not(.editing) .course-content [data-for='cmlist'] {
+        display: none !important;
+    }
+
+    body:not(.editing) .course-content .single-section [data-for='cmlist'],
+    body:not(.editing) .course-content .section-open [data-for='cmlist'] {
+        display: block !important;
+    }
+
+    .activity .available_percent {
+        position: absolute !important;
+        right: -17px !important;
+        top: 10px !important;
+    }
+
+    .activity .available_percent {
+        width: 65px;
+    }
+
+    /* ====================================================================== */
+    /* botabotao entrar/sair da sessao
+    /* ====================================================================== */
+
+    .button_enter_section {
+        display: block;
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 6px 12px;
+        margin: 26px 0 0 0;
+        border: 0;
+    }
+
+    .button_back_section {
+        background: none;
+        border: 0;
+        display: none;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 24px;
+        top: 24px;
+    }
+
+    .button_back_section span {
+        font-size: 28px;
+    }
+
+    .section-open .button_back_section,
+    .single-section .button_back_section {
+        display: block;
+    }
+
+    .section-open .button_enter_section,
+    .single-section .button_enter_section {
+        display: none;
+    }
+
+    /* ====================================================================== */
+    /* atividades retrateis */
+    /* ====================================================================== */
+
+    .activities_refactor {
+        display: none;
+    }
+
+    .single-section .activities_refactor,
+    .section-open .activities_refactor {
+        display: block;
+    }
+
+    .activities_sub {
+        display: none;
+    }
+}
