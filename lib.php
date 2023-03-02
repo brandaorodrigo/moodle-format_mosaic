@@ -53,6 +53,8 @@ class format_mosaic extends format_topics
             'base64_s4',
             'base64_s4_hover',
             'base64_s4_full',
+
+            'css_extra'
         ];
 
         $parent = parent::course_format_options($foreditform);
@@ -62,7 +64,7 @@ class format_mosaic extends format_topics
                 'default' => $courseconfig->{$m},
                 'type' => PARAM_TEXT,
                 'label' => get_string($m, 'format_mosaic'),
-                'element_type' => 'text',
+                'element_type' => stristr($m, 'css') ? 'textarea' : 'text',
             ];
         }
         global $PAGE;

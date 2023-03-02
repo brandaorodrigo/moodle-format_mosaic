@@ -2,21 +2,21 @@
 /* remove elementos nao usados no mosaico */
 /* ========================================================================== */
 
-body#page-course-view-mosaic:not(.editing) #collapsesections,
-body#page-course-view-mosaic:not(.editing) #page-footer,
-body#page-course-view-mosaic:not(.editing) #maincontent,
-body#page-course-view-mosaic:not(.editing) #page-header,
-body#page-course-view-mosaic:not(.editing) .drawer.drawer-left,
-body#page-course-view-mosaic:not(.editing) .course-section-header .icon,
-body#page-course-view-mosaic:not(.editing) .drawer-toggles .drawer-left-toggle,
-body#page-course-view-mosaic:not(.editing) .icons-collapse-expand,
-body#page-course-view-mosaic:not(.editing) .section-summary-activities,
-body#page-course-view-mosaic:not(.editing) .modal-backdrop.show,
-body#page-course-view-mosaic:not(.editing) .secondary-navigation,
-body#page-course-view-mosaic:not(.editing) .section_availability,
-body#page-course-view-mosaic:not(.editing) .activityiconcontainer.courseicon,
-body#page-course-view-mosaic:not(.editing) [data-region='completion-info'],
-body#page-course-view-mosaic:not(.editing)
+#page-course-view-mosaic:not(.editing) #collapsesections,
+#page-course-view-mosaic:not(.editing) #page-footer,
+#page-course-view-mosaic:not(.editing) #maincontent,
+#page-course-view-mosaic:not(.editing) #page-header,
+#page-course-view-mosaic:not(.editing) .drawer.drawer-left,
+#page-course-view-mosaic:not(.editing) .course-section-header .icon,
+#page-course-view-mosaic:not(.editing) .drawer-toggles .drawer-left-toggle,
+#page-course-view-mosaic:not(.editing) .icons-collapse-expand,
+#page-course-view-mosaic:not(.editing) .section-summary-activities,
+#page-course-view-mosaic:not(.editing) .modal-backdrop.show,
+#page-course-view-mosaic:not(.editing) .secondary-navigation,
+#page-course-view-mosaic:not(.editing) .section_availability,
+#page-course-view-mosaic:not(.editing) .activityiconcontainer.courseicon,
+#page-course-view-mosaic:not(.editing) [data-region='completion-info'],
+#page-course-view-mosaic:not(.editing)
     .activity-item
     .activitytitle
     .media-body
@@ -28,7 +28,7 @@ body#page-course-view-mosaic:not(.editing)
 /* esconde pagina inteira até terminar o carregamento */
 /* ========================================================================== */
 
-body#page-course-view-mosaic:not(.editing) #page-content {
+#page-course-view-mosaic:not(.editing) #page-content {
     display: none;
 }
 
@@ -36,7 +36,7 @@ body#page-course-view-mosaic:not(.editing) #page-content {
 /* formato de curso mosaico */
 /* ========================================================================== */
 
-body#page-course-view-mosaic:not(.editing)
+#page-course-view-mosaic:not(.editing)
     #page.drawers
     #topofscroll
     #page-content.main-inner
@@ -44,7 +44,7 @@ body#page-course-view-mosaic:not(.editing)
     padding: 0 !important;
 }
 
-body:not(.editing) .course-content ul.mosaic {
+.course-content ul.mosaic {
     margin: 0;
     min-height: calc(100vh - 46px);
     padding: 0;
@@ -52,7 +52,7 @@ body:not(.editing) .course-content ul.mosaic {
     width: 100vw;
 }
 
-body:not(.editing) .course-content .single-section {
+.course-content .single-section {
     margin: 0;
 }
 
@@ -153,39 +153,35 @@ body:not(.editing) .course-content .single-section {
 /* sessoes */
 /* ========================================================================== */
 
-body:not(.editing) .course-content ul.mosaic li.section {
+.course-content ul.mosaic li.section {
     margin: 0;
     padding: 40px !important;
     position: relative;
 }
 
-body:not(.editing) .course-content ul.mosaic li.section#section-0 {
+#section-0 {
     background-color: #111;
     color: #fefefe;
 }
 
-body:not(.editing)
-    .course-content
-    ul.mosaic
-    li.section#section-0
-    [data-for='cmlist'] {
+#section-0 [data-for='cmlist'] {
     display: none !important;
 }
 
-body:not(.editing) .course-content ul.mosaic li.section ul.section {
+.course-content ul.mosaic li.section ul.section {
     margin: 0 0 0 22px !important;
     padding: 0 !important;
 }
 
-body:not(.editing) .course-content .d-flex {
+.course-content .d-flex {
     padding: 0 !important;
 }
 
-body:not(.editing) .course-content .section .activity {
+.course-content .section .activity {
     padding: 0;
 }
 
-body:not(.editing) .course-content .module_badge {
+.course-content .module_badge {
     border: 1px solid #111;
     color: #111;
     display: inline-block;
@@ -196,7 +192,7 @@ body:not(.editing) .course-content .module_badge {
     padding: 6px;
 }
 
-body:not(.editing) .course-content h3 {
+.course-content h3 {
     cursor: pointer;
     font-size: 20px !important;
     font-weight: bold !important;
@@ -205,11 +201,11 @@ body:not(.editing) .course-content h3 {
     padding: 0 !important;
 }
 
-body:not(.editing) .course-content #section-0 h3 {
+.course-content #section-0 h3 {
     font-size: 42px !important;
 }
 
-body:not(.editing) .course-content h4 {
+.course-content h4 {
     border-top: 1px solid #00000030;
     font-size: 14px !important;
     line-height: 30px !important;
@@ -217,12 +213,12 @@ body:not(.editing) .course-content h4 {
     padding: 10px 0 0 0 !important;
 }
 
-body:not(.editing) .course-content .modtype_label:first-child h4 {
+.course-content .modtype_label:first-child h4 {
     border: 0;
     margin: 0 !important;
 }
 
-body:not(.editing) .course-content h5 {
+.course-content h5 {
     font-size: 13px !important;
     font-weight: bold;
     line-height: 13px !important;
@@ -231,25 +227,25 @@ body:not(.editing) .course-content h5 {
     padding: 0 !important;
 }
 
-body:not(.editing) .course-content .activity-item.activityinline,
-body:not(.editing) .course-content .activity-item:not(.activityinline) {
+.course-content .activity-item.activityinline,
+.course-content .activity-item:not(.activityinline) {
     border: 0 !important;
     font-size: 14px !important;
     margin: 16px 0 0 0 !important;
     padding: 0 !important;
 }
 
-body:not(.editing) .course-content div[data-for='sectioninfo'] {
+.course-content div[data-for='sectioninfo'] {
     font-size: 14px;
     margin: 26px 0 0 0 !important;
     padding: 0 !important;
 }
 
-body:not(.editing) .course-content .force-display {
+.course-content .force-display {
     display: block !important;
 }
 
-body:not(.editing) .course-content .available_date {
+.course-content .available_date {
     align-items: center;
     display: table-cell;
     font-size: 12px;
@@ -257,15 +253,15 @@ body:not(.editing) .course-content .available_date {
     line-height: 24px;
 }
 
-body:not(.editing) .course-content .available_date .icon {
+.course-content .available_date .icon {
     margin: 0 0 0 5px;
 }
 
-body:not(.editing) .course-content .availabilityinfo.course-description-item {
+.course-content .availabilityinfo.course-description-item {
     padding: 6px;
 }
 
-body:not(.editing) .course-content .activitytitle .activityname a {
+.course-content .activitytitle .activityname a {
     background-color: #111;
     color: #ffffff;
     font-size: 13px;
@@ -273,38 +269,28 @@ body:not(.editing) .course-content .activitytitle .activityname a {
     padding: 4px 6px;
 }
 
-body:not(.editing)
-    .course-content
-    .activitytitle.modtype_resource
-    .activityname,
-body:not(.editing) .course-content .activitytitle.modtype_page .activityname {
+.course-content .activitytitle.modtype_resource .activityname,
+.course-content .activitytitle.modtype_page .activityname {
     background: none;
     margin: 0;
     padding: 0;
 }
 
-body:not(.editing)
-    .course-content
-    .activitytitle.modtype_resource
-    .activityname
-    a,
-body:not(.editing) .course-content .activitytitle.modtype_page .activityname a {
+.course-content .activitytitle.modtype_resource .activityname a,
+.course-content .activitytitle.modtype_page .activityname a {
     background: none;
     color: #111;
     font-weight: normal;
 }
 
-body:not(.editing)
-    .description[data-for='sectioninfo']
-    .course-description-item {
+.description[data-for='sectioninfo'] .course-description-item {
     background: none;
     font-size: 14px;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-body:not(.editing)
-    .description[data-for='sectioninfo']
+.description[data-for='sectioninfo']
     .course-description-item
     .description-inner {
     border: 0 !important;
@@ -392,19 +378,16 @@ body:not(.editing)
 /* ========================================================================== */
 
 @media (min-width: 960px) {
-    body:not(.editing) .course-content .course-description-item.summarytext {
+    .course-content .course-description-item.summarytext {
         max-height: 128px;
         overflow: auto;
     }
 
-    body:not(.editing)
-        .course-content
-        #section-0
-        .course-description-item.summarytext {
+    #section-0 .course-description-item.summarytext {
         max-height: none;
     }
 
-    body:not(.editing) .course-content ul.mosaic li.section {
+    .course-content ul.mosaic li.section {
         background-repeat: no-repeat !important;
         background-size: 100% 100% !important;
         border: 1px solid #f8f8f8;
@@ -418,7 +401,7 @@ body:not(.editing)
         z-index: 99;
     }
 
-    body:not(.editing) .course-content #section-0 {
+    #section-0 {
         border-bottom: 0;
         border-left: 0;
         border-top: 0;
@@ -426,40 +409,40 @@ body:not(.editing)
         width: 33.3%;
     }
 
-    body:not(.editing) .course-content #section-1 {
+    #section-1 {
         height: 50%;
         left: 33.3%;
         width: 33.3%;
     }
 
-    body:not(.editing) .course-content #section-2 {
+    #section-2 {
         height: 50%;
         left: 66.6%;
         width: 33.3%;
     }
 
-    body:not(.editing) .course-content #section-3 {
+    #section-3 {
         height: 50%;
         left: 33.3%;
         top: 50%;
         width: 33.3%;
     }
 
-    body:not(.editing) .course-content #section-4 {
+    #section-4 {
         height: 50%;
         left: 66.6%;
         top: 50%;
         width: 33.3%;
     }
 
-    body:not(.editing) .course-content #section-5,
-    body:not(.editing) .course-content #section-6,
-    body:not(.editing) .course-content #section-7,
-    body:not(.editing) .course-content #section-8 {
+    #section-5,
+    #section-6,
+    #section-7,
+    #section-8 {
         display: none;
     }
 
-    body:not(.editing) .course-content .section-open {
+    .course-content .section-open {
         background-color: #ffffff !important;
         height: 100% !important;
         left: 33.3% !important;
@@ -469,14 +452,14 @@ body:not(.editing)
         z-index: 999 !important;
     }
 
-    body:not(.editing) .course-content .single-section .course-section {
+    .course-content .single-section .course-section {
         height: 100% !important;
         left: 33.3% !important;
         top: 0 !important;
         width: 67% !important;
     }
 
-    body:not(.editing) .course-content .squares {
+    .course-content .squares {
         background: none;
         bottom: 0;
         display: block;
@@ -489,7 +472,7 @@ body:not(.editing)
         z-index: 99;
     }
 
-    body:not(.editing) .course-content .single-section {
+    .course-content .single-section {
         height: 100%;
         margin: 0;
         overflow: hidden;
@@ -499,18 +482,18 @@ body:not(.editing)
         width: 100vw;
     }
 
-    body:not(.editing) .course-content .single-section ul.mosaic {
+    .course-content .single-section ul.mosaic {
         position: absolute;
         top: 0;
         width: calc(100% - 6px);
     }
 
-    body:not(.editing) .course-content [data-for='cmlist'] {
+    .course-content [data-for='cmlist'] {
         display: none !important;
     }
 
-    body:not(.editing) .course-content .single-section [data-for='cmlist'],
-    body:not(.editing) .course-content .section-open [data-for='cmlist'] {
+    .course-content .single-section [data-for='cmlist'],
+    .course-content .section-open [data-for='cmlist'] {
         display: block !important;
     }
 
