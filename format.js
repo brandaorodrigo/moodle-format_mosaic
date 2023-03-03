@@ -148,7 +148,13 @@ if (courseSection && courseSection.length) {
             const Div = document.createElement('div');
             Div.className = 'available_date';
             Div.innerHTML =
-                date.innerHTML + `<i class="icon fa fa-lock fa-fw"></i>`;
+                date.innerHTML +
+                `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                <path d="M32.3,16.8h-2.1v-5.6c0-2.7-1.1-5.3-3-7.3s-4.5-3-7.3-3s-5.3,1.1-7.3,3s-3,4.5-3,7.3v5.6H7.7c-2.8,0-5,2.2-5,5
+                v12.3c0,2.8,2.2,5,5,5h24.7c2.7,0,5-2.2,5-5V21.8C37.3,19,35.1,16.8,32.3,16.8z M12.6,11.2c0-2,0.8-3.8,2.1-5.2S18,3.8,20,3.8
+                s3.8,0.8,5.2,2.1s2.1,3.2,2.1,5.2v5.6H12.6V11.2z M34.4,34.1c0,1.1-0.9,2.1-2.1,2.1H7.7c-1.1,0-2.1-0.9-2.1-2.1V21.8
+                c0-1.1,0.9-2.1,2.1-2.1h24.7c1.1,0,2.1,0.9,2.1,2.1C34.4,21.8,34.4,34.1,34.4,34.1z"/>
+                </svg>`;
             Header.append(Div);
         }
 
@@ -164,15 +170,11 @@ if (courseSection && courseSection.length) {
                 const pill = e.querySelector('.badge-pill:last-child strong');
                 if (pill) {
                     const Div = document.createElement('div');
-                    Div.className = 'progress_activity';
-                    Div.innerHTML = `<span class="${
-                        pill.innerHTML.indexOf('Feito:') !== -1
-                            ? 'completed'
-                            : 'incomplete'
-                    } material-symbols-outlined">done</span>`;
+                    const s = pill.innerHTML.indexOf('Feito:') !== -1;
+                    Div.className = 'progress_activity ' + (!s && 'wait');
+                    Div.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M13.2,33.9c-0.4,0-0.8-0.2-1.1-0.4L0.9,22.2c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l10.2,10.2L36.9,6.6C37.5,6,38.5,6,39,6.6c0.6,0.6,0.6,1.5,0,2.1L14.3,33.4C14,33.7,13.6,33.9,13.2,33.9z" /></svg>`;
                     e.querySelector('.activityname a').appendChild(Div);
                 }
-
                 if (
                     !e.classList.contains('modtype_page') &&
                     !e.classList.contains('modtype_resource')
@@ -189,7 +191,7 @@ if (courseSection && courseSection.length) {
                     }
 
                     if (e.classList.contains('modtype_assign')) {
-                        Icon.innerHTML = `<span class="material-symbols-outlined">close</span>`;
+                        Icon.innerHTML = `<span class="material-symbols-outlined">edit</span>`;
                     }
 
                     e.querySelector('.activityname a').appendChild(Icon);
@@ -209,7 +211,13 @@ if (courseSection && courseSection.length) {
 
                 const Back = document.createElement('button');
                 Back.className = 'button_back_section';
-                Back.innerHTML = `<span class="material-symbols-outlined">cancel</span>`;
+                Back.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                <path d="M20.1,0.6C9.3,0.6,0.6,9.3,0.6,20.1s8.7,19.5,19.5,19.5s19.5-8.7,19.5-19.5S30.8,0.6,20.1,0.6z M20.1,36.6
+                c-9.1,0-16.5-7.4-16.5-16.5S11,3.6,20.1,3.6S36.6,11,36.6,20.1S29.2,36.6,20.1,36.6z" />
+                <path d="M26.5,13.6c-0.6-0.6-1.5-0.6-2.1,0l-4.3,4.3l-4.3-4.3c-0.6-0.6-1.5-0.6-2.1,0c-0.6,0.6-0.6,1.5,0,2.1L18,20l-4.3,4.3
+                c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l4.3-4.3l4.3,4.3c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4
+                c0.6-0.6,0.6-1.5,0-2.1L22.2,20l4.3-4.3C27.1,15.1,27.1,14.2,26.5,13.6L26.5,13.6z" />
+                </svg>`;
                 each.append(Back);
 
                 const href = each.querySelector('.sectionname a');

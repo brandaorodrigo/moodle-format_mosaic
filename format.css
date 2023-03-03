@@ -133,7 +133,7 @@
 }
 
 .section-open .mosaic_header {
-    width: calc(100% - 10px);
+    width: calc(100% - 22px);
 }
 
 /* contador de porcentagem */
@@ -185,9 +185,10 @@
     line-height: 18px;
 }
 
-.mosaic_header .available_date .icon {
-    margin: 0 0 0 5px;
+.mosaic_header .available_date svg {
+    margin: -1px 0 0 8px;
     float: right;
+    width: 18px;
 }
 
 /* distintivo do modulo */
@@ -344,22 +345,16 @@
 
 .progress_activity {
     float: left;
+    width: 20px;
+    height: 27px;
 }
 
 .progress_activity div {
     display: inline-block;
 }
 
-.progress_activity .enter {
-    color: #111;
-}
-
-.progress_activity .completed {
-    color: #111;
-}
-
-.progress_activity .incomplete {
-    color: #00000025;
+.progress_activity.wait {
+    fill: #00000010;
 }
 
 .mosaic_activity_icon {
@@ -394,8 +389,10 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    right: 24px;
-    top: 24px;
+    right: 22px;
+    top: 22px;
+    width: 28px;
+    height: 28px;
 }
 
 .button_back_section span {
@@ -518,6 +515,12 @@
         position: absolute;
         left: 4vw;
         top: calc(50% - 130px);
+        fill: #fff;
+    }
+
+    .mosaic_start svg {
+        width: 24px;
+        margin: 0 0 0 6px;
     }
 
     .course-content .single-section {
