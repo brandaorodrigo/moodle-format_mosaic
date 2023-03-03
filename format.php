@@ -29,7 +29,6 @@ if (!$PAGE->user_is_editing()) {
         }
 
         .progress_activity,
-        .mosaic_start,
         .moisaic_activity_enter {
             fill: <?php echo $course->color ?>;
         }

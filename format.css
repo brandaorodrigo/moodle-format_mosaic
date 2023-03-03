@@ -91,17 +91,18 @@
 
 .mosaic_start {
     margin-top: 36px;
-    fill: #fff;
 }
 
 .mosaic_start a {
     color: #fff;
+    fill: #fff;
     font-size: 15px;
     font-weight: bold;
 }
 
 .mosaic_start svg {
     width: 24px;
+    fill: #fff;
     margin: 0 0 0 6px;
 }
 
