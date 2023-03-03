@@ -173,8 +173,15 @@ if (courseSection && courseSection.length) {
                     const s = pill.innerHTML.indexOf('Feito:') !== -1;
                     Div.className = 'progress_activity ' + (!s && 'wait');
                     Div.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M13.2,33.9c-0.4,0-0.8-0.2-1.1-0.4L0.9,22.2c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l10.2,10.2L36.9,6.6C37.5,6,38.5,6,39,6.6c0.6,0.6,0.6,1.5,0,2.1L14.3,33.4C14,33.7,13.6,33.9,13.2,33.9z" /></svg>`;
-                    e.querySelector('.activityname a').appendChild(Div);
+                    const a = e.querySelector('.activityname a');
+                    a.insertBefore(Div, a.firstChild);
                 }
+
+                const Enter = document.createElement('div');
+                Enter.className = 'moisaic_activity_enter';
+                Enter.innerHTML = ` <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,0C5.37,0,0,5.37,0,12s5.37,12,12,12,12-5.37,12-12S18.63,0,12,0Zm7.92,12.38c-.05,.12-.12,.23-.22,.33l-7,7c-.2,.2-.45,.29-.71,.29s-.51-.1-.71-.29c-.39-.39-.39-1.02,0-1.41l5.29-5.29H5c-.55,0-1-.45-1-1s.45-1,1-1h11.59l-5.29-5.29c-.39-.39-.39-1.02,0-1.41s1.02-.39,1.41,0l7,7c.09,.09,.17,.2,.22,.33,.1,.24,.1,.52,0,.76Z" /></svg>`;
+                e.appendChild(Enter);
+
                 if (
                     !e.classList.contains('modtype_page') &&
                     !e.classList.contains('modtype_resource')

@@ -23,15 +23,13 @@ if (!$PAGE->user_is_editing()) {
         }
 
         #section-0,
-        .button_enter_section,
-
-
-        .available_percent .completed {
+        .button_enter_section {
 
             background-color: <?php echo $course->color ?> !important;
         }
 
-        .progress_activity {
+        .progress_activity,
+        .moisaic_activity_enter {
             fill: <?php echo $course->color ?>;
         }
 

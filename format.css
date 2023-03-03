@@ -91,12 +91,18 @@
 
 .mosaic_start {
     margin-top: 36px;
+    fill: #fff;
 }
 
 .mosaic_start a {
     color: #fff;
     font-size: 15px;
     font-weight: bold;
+}
+
+.mosaic_start svg {
+    width: 24px;
+    margin: 0 0 0 6px;
 }
 
 /* ========================================================================== */
@@ -217,6 +223,7 @@
 #section-0 {
     background-color: #111;
     color: #fefefe;
+    overflow: hidden;
 }
 
 #section-0 [data-for='cmlist'] {
@@ -234,6 +241,7 @@
 
 .course-content .section .activity {
     padding: 0 0 0 14px;
+    position: relative;
 }
 
 .course-content .section .activity.modtype_label {
@@ -339,6 +347,20 @@
     border: 0 !important;
 }
 
+.moisaic_activity_enter {
+    float: right !important;
+    width: 24px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    top: -2px;
+    right: 0;
+    height: 24px !important;
+}
+
+.moisaic_activity_enter svg {
+    width: 24px;
+}
+
 /* ========================================================================== */
 /* progresso das atividades */
 /* ========================================================================== */
@@ -435,7 +457,7 @@
         border-left: 0;
         border-top: 0;
         height: 100%;
-        padding: 5% 4% 0 4% !important;
+        padding: 80px 4% 0 4% !important;
     }
 
     #section-1 {
@@ -515,12 +537,6 @@
         position: absolute;
         left: 4vw;
         top: calc(50% - 130px);
-        fill: #fff;
-    }
-
-    .mosaic_start svg {
-        width: 24px;
-        margin: 0 0 0 6px;
     }
 
     .course-content .single-section {
