@@ -165,12 +165,34 @@ if (courseSection && courseSection.length) {
                 if (pill) {
                     const Div = document.createElement('div');
                     Div.className = 'progress_activity';
-                    Div.innerHTML = progress = `<span class="${
+                    Div.innerHTML = `<span class="${
                         pill.innerHTML.indexOf('Feito:') !== -1
                             ? 'completed'
                             : 'incomplete'
                     } material-symbols-outlined">done</span>`;
                     e.querySelector('.activityname a').appendChild(Div);
+                }
+
+                if (
+                    !e.classList.contains('modtype_page') &&
+                    !e.classList.contains('modtype_resource')
+                ) {
+                    const Icon = document.createElement('div');
+                    Icon.className = 'mosaic_activity_icon';
+
+                    if (e.classList.contains('modtype_forum')) {
+                        Icon.innerHTML = `<span class="material-symbols-outlined">chat</span>`;
+                    }
+
+                    if (e.classList.contains('modtype_quiz')) {
+                        Icon.innerHTML = `<span class="material-symbols-outlined">quiz</span>`;
+                    }
+
+                    if (e.classList.contains('modtype_assign')) {
+                        Icon.innerHTML = `<span class="material-symbols-outlined">close</span>`;
+                    }
+
+                    e.querySelector('.activityname a').appendChild(Icon);
                 }
             });
 

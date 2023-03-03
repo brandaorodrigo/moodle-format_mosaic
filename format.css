@@ -232,6 +232,10 @@
 }
 
 .course-content .section .activity {
+    padding: 0 0 0 14px;
+}
+
+.course-content .section .activity.modtype_label {
     padding: 0;
 }
 
@@ -252,10 +256,10 @@
 }
 
 .course-content h4 {
-    border-top: 1px solid #00000030;
+    border-top: 2px solid #eee;
     font-size: 14px !important;
     line-height: 30px !important;
-    margin: 8px 0 0 0 !important;
+    margin: 28px 0 0 0 !important;
     padding: 10px 0 0 0 !important;
 }
 
@@ -277,7 +281,7 @@
 .course-content .activity-item:not(.activityinline) {
     border: 0 !important;
     font-size: 14px !important;
-    margin: 16px 0 0 0 !important;
+    margin: 11px 0 0 0 !important;
     padding: 0 !important;
 }
 
@@ -302,7 +306,7 @@
     */
     color: #111;
     font-size: 13px;
-    margin: 6px 0 6px 55px;
+    margin: 6px 0 6px 0;
     padding: 4px 6px;
 }
 
@@ -317,7 +321,7 @@
 .course-content .activitytitle.modtype_page .activityname a {
     background: none;
     color: #111;
-    margin: 6px 0 6px 26px;
+    margin: 6px 0 6px 2px;
     font-weight: normal;
 }
 
@@ -339,12 +343,7 @@
 /* ========================================================================== */
 
 .progress_activity {
-    display: block;
-    float: right;
-    left: 0;
-    margin: 0;
-    position: absolute;
-    top: 0;
+    float: left;
 }
 
 .progress_activity div {
@@ -361,6 +360,11 @@
 
 .progress_activity .incomplete {
     color: #00000025;
+}
+
+.mosaic_activity_icon {
+    float: left;
+    margin: 0 4px 0 8px;
 }
 
 /* ========================================================================== */
