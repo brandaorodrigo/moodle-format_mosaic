@@ -30,6 +30,7 @@ const onChangeSection = (number, action) => {
     if (section) {
         const ul = section.querySelector('ul.section');
         if (action) {
+            section.style.zIndex = 999;
             self.location.hash = number;
             section.classList.add('section-open');
             ul.classList.add('force-display');
@@ -37,6 +38,9 @@ const onChangeSection = (number, action) => {
             self.location.hash = '';
             section.classList.remove('section-open');
             ul.classList.remove('force-display');
+            setTimeout(() => {
+                section.style.zIndex = 99;
+            }, 400);
         }
     }
 };
