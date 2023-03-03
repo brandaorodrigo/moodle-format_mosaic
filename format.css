@@ -89,6 +89,16 @@
     top: 50%;
 }
 
+.mosaic_start {
+    margin-top: 36px;
+}
+
+.mosaic_start a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 /* ========================================================================== */
 /* formato de curso mosaico */
 /* ========================================================================== */
@@ -286,10 +296,13 @@
 }
 
 .course-content .activitytitle .activityname a {
+    /*
     background-color: #111;
     color: #ffffff;
+    */
+    color: #111;
     font-size: 13px;
-    margin: 6px 0 6px 26px;
+    margin: 6px 0 6px 55px;
     padding: 4px 6px;
 }
 
@@ -304,6 +317,7 @@
 .course-content .activitytitle.modtype_page .activityname a {
     background: none;
     color: #111;
+    margin: 6px 0 6px 26px;
     font-weight: normal;
 }
 
@@ -420,6 +434,7 @@
         border-left: 0;
         border-top: 0;
         height: 100%;
+        padding: 5% 4% 0 4% !important;
     }
 
     #section-1 {
@@ -493,6 +508,12 @@
         position: absolute;
         width: 100%;
         z-index: 99;
+    }
+
+    .mosaic_start {
+        position: absolute;
+        left: 4vw;
+        top: calc(50% - 130px);
     }
 
     .course-content .single-section {

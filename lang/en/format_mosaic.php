@@ -1,9 +1,13 @@
 <?php
 
+$string['section0name'] = 'Geral';
 $string['sectionname'] = 'Mosáico';
 $string['pluginname'] = 'Format mosáico';
 
 $string['color'] = 'Cor';
+
+$string['name_start'] = '<strong>Iníco</strong> Texto';
+$string['href_start'] = '<strong>Início</strong> Link';
 
 $string['name_q1'] = '<strong>Q1</strong> Texto';
 $string['href_q1'] = '<strong>Q1</strong> Link';

@@ -281,6 +281,8 @@ if (courseSection && courseSection.length) {
 // coloca squares dentro do topic geral
 // =============================================================================
 
+const start = document.querySelector('#mosaic_start');
+document.querySelector('#section-0').append(start);
 const squares = document.querySelector('#mosaic_squares');
 document.querySelector('#section-0').append(squares);
 

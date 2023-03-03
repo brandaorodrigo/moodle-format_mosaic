@@ -101,6 +101,11 @@ if (!$PAGE->user_is_editing()) {
 
         <?php echo $course->css_extra ?>
     </style>
+    <?php if ($course->name_start) : ?>
+        <div class="mosaic_start" id="mosaic_start">
+            <a href="<?php echo $course->href_start ?>"><?php echo $course->name_start ?></a>
+        </div>
+    <?php endif ?>
     <div class="squares" id="mosaic_squares">
         <div class="square">
             <?php if ($course->name_q1) : ?>
