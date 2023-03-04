@@ -78,7 +78,7 @@ class format_mosaic extends format_topics
         $courseconfig = get_config('moodlecourse');
         foreach ($mosaic as $m) {
             $parent[$m] = [
-                'default' => $courseconfig->{$m},
+                'default' => @$courseconfig->{$m} ?: null,
                 'type' => PARAM_TEXT,
                 'label' => get_string($m, 'format_mosaic'),
                 'element_type' => stristr($m, 'css') ? 'textarea' : 'text',

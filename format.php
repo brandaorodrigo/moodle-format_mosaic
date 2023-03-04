@@ -4,6 +4,8 @@ defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->dirroot . '/course/format/topics/format.php');
 
+$_SESSION['color'] = $course->color;
+
 global $PAGE;
 
 if (!$PAGE->user_is_editing()) {
@@ -11,7 +13,7 @@ if (!$PAGE->user_is_editing()) {
     function b64($name)
     {
         global $CFG, $course;
-        return $CFG->wwwroot . '/course/format/mosaic/base64.php?name=base64_' . $name . '&id=' . $course->id;
+        return $CFG->wwwroot . '/course/format/mosaic/call_img.php?name=base64_' . $name . '&id=' . $course->id;
     }
 
     $PAGE->requires->js('/course/format/mosaic/format.js');
