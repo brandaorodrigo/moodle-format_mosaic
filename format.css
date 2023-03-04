@@ -320,21 +320,6 @@
     padding: 4px 6px;
 }
 
-.course-content .activitytitle.modtype_resource .activityname,
-.course-content .activitytitle.modtype_page .activityname {
-    background: none;
-    margin: 0;
-    padding: 0;
-}
-
-.course-content .activitytitle.modtype_resource .activityname a,
-.course-content .activitytitle.modtype_page .activityname a {
-    background: none;
-    color: #111;
-    margin: 6px 0 6px 2px;
-    font-weight: normal;
-}
-
 .description[data-for='sectioninfo'] .course-description-item {
     background: none;
     font-size: 14px;
@@ -380,9 +365,16 @@
     fill: #00000010;
 }
 
-.mosaic_activity_icon {
+/* ========================================================================== */
+/* icone */
+/* ========================================================================== */
+
+.mosaic_icon {
     float: left;
     margin: 0 4px 0 8px;
+    width: 22px;
+    height: 22px;
+    background-size: 100% 100%;
 }
 
 /* ========================================================================== */

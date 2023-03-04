@@ -55,4 +55,18 @@ $string['base64_s4'] = '<strong>Módulo 4</strong> fundo';
 $string['base64_s4_hover'] = '<strong>Módulo 4</strong> mouse';
 $string['base64_s4_full'] = '<strong>Módulo 4</strong> aberto';
 
+$string['base64_i_assign'] = '<strong>Icone</strong> Tarefa';
+$string['base64_i_chat'] = '<strong>Icone</strong> Chat';
+$string['base64_i_choice'] = '<strong>Icone</strong> Escolha';
+$string['base64_i_data'] = '<strong>Icone</strong> Banco de dados';
+$string['base64_i_feedback'] = '<strong>Icone</strong> Pesquisa';
+$string['base64_i_forum'] = '<strong>Icone</strong> Forum';
+$string['base64_i_glossary'] = '<strong>Icone</strong> Glossario';
+$string['base64_i_lesson'] = '<strong>Icone</strong> Lissão';
+$string['base64_i_lti'] = '<strong>Icone</strong> Ferramenta externa';
+$string['base64_i_quiz'] = '<strong>Icone</strong> Questionário';
+$string['base64_i_survey'] = '<strong>Icone</strong> Pesquisa de avaliação';
+$string['base64_i_wiki'] = '<strong>Icone</strong> Wiki';
+$string['base64_i_workshop'] = '<strong>Icone</strong> Laboratório de avaliação';
+
 $string['css_extra'] = '<strong>CSS</strong> extra';

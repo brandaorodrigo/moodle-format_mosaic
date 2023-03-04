@@ -49,6 +49,58 @@ if (!$PAGE->user_is_editing()) {
             background-image: url(<?php echo b64('q4') ?>);
         }
 
+        .mosaic_icon.assign {
+            background-image: url(<?php echo b64('i_assign') ?>);
+        }
+
+        .mosaic_icon.chat {
+            background-image: url(<?php echo b64('i_chat') ?>);
+        }
+
+        .mosaic_icon.choice {
+            background-image: url(<?php echo b64('i_choice') ?>);
+        }
+
+        .mosaic_icon.data {
+            background-image: url(<?php echo b64('i_data') ?>);
+        }
+
+        .mosaic_icon.feedback {
+            background-image: url(<?php echo b64('i_feedback') ?>);
+        }
+
+        .mosaic_icon.forum {
+            background-image: url(<?php echo b64('i_forum') ?>);
+        }
+
+        .mosaic_icon.glossary {
+            background-image: url(<?php echo b64('i_glossary') ?>);
+        }
+
+        .mosaic_icon.lesson {
+            background-image: url(<?php echo b64('i_lesson') ?>);
+        }
+
+        .mosaic_icon.lti {
+            background-image: url(<?php echo b64('i_lti') ?>);
+        }
+
+        .mosaic_icon.quiz {
+            background-image: url(<?php echo b64('i_quiz') ?>);
+        }
+
+        .mosaic_icon.survey {
+            background-image: url(<?php echo b64('i_survey') ?>);
+        }
+
+        .mosaic_icon.wiki {
+            background-image: url(<?php echo b64('i_wiki') ?>);
+        }
+
+        .mosaic_icon.workshop {
+            background-image: url(<?php echo b64('i_workshop') ?>);
+        }
+
         @media (min-width: 960px) {
             #section-0 {
                 background-image: url(<?php echo b64('s0') ?>);

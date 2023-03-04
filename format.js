@@ -1,5 +1,5 @@
 // =============================================================================
-// importa format css
+// importa css
 // =============================================================================
 
 const theme = document.createElement('link');
@@ -10,7 +10,7 @@ theme.media = 'all';
 document.head.appendChild(theme);
 
 // =============================================================================
-// funcao para exibir ou ocultar sessao
+// funcao - exibe ou oculta sessao
 // =============================================================================
 
 const onChangeSection = (number, action) => {
@@ -34,7 +34,7 @@ const onChangeSection = (number, action) => {
 };
 
 // =============================================================================
-// funcao criadora de barra de porcentagem
+// funcao - exibe barra de porcentagem
 // =============================================================================
 
 const appendAvailablePercent = (value, element) => {
@@ -52,7 +52,7 @@ const appendAvailablePercent = (value, element) => {
 };
 
 // =============================================================================
-// funcao calcular valores de barra de porcentagem
+// funcao - calcula barra de porcentagem
 // =============================================================================
 
 const appendActivityPercent = (pill, element) => {
@@ -74,7 +74,7 @@ const appendActivityPercent = (pill, element) => {
 };
 
 // =============================================================================
-// adiciona funcionalidades nas sessoes
+// módulos
 // =============================================================================
 
 const courseSection = document.querySelectorAll('.course-section');
@@ -84,7 +84,7 @@ if (courseSection && courseSection.length) {
         if (modules == 0) return;
 
         // =====================================================================
-        // cria div do numero do modulo
+        // módulo - numero
         // =====================================================================
 
         const Div = document.createElement('div');
@@ -93,7 +93,7 @@ if (courseSection && courseSection.length) {
         each.prepend(Div);
 
         // =====================================================================
-        // cria div de cabecalho do mosaico
+        // módulo - cabecalho
         // =====================================================================
 
         const Header = document.createElement('div');
@@ -101,7 +101,7 @@ if (courseSection && courseSection.length) {
         each.prepend(Header);
 
         // =====================================================================
-        // calcula porcentagem concluida dentro e fora da sessao
+        // módulo - calcula porcentagem concluida
         // =====================================================================
 
         const activity_count = each.querySelectorAll('span.activity-count');
@@ -126,7 +126,7 @@ if (courseSection && courseSection.length) {
         }
 
         // =====================================================================
-        // data de abertura da sessao
+        // módulo - data de abertura
         // =====================================================================
 
         const date = each.querySelector(
@@ -147,7 +147,7 @@ if (courseSection && courseSection.length) {
         }
 
         // =====================================================================
-        // adiciona icone de completo ou incompleto em cada atividade
+        // atividades
         // =====================================================================
 
         const activities = each.querySelectorAll(
@@ -155,6 +155,10 @@ if (courseSection && courseSection.length) {
         );
         if (activities && activities.length) {
             activities.forEach((e) => {
+                // =============================================================
+                // atividade - icone de completo e incompleto
+                // =============================================================
+
                 const pill = e.querySelector('.badge-pill:last-child strong');
                 if (pill) {
                     const Div = document.createElement('div');
@@ -165,36 +169,32 @@ if (courseSection && courseSection.length) {
                     a.insertBefore(Div, a.firstChild);
                 }
 
+                // =============================================================
+                // atividade - icone entrar
+                // =============================================================
+
                 const Enter = document.createElement('div');
                 Enter.className = 'moisaic_activity_enter';
                 Enter.innerHTML = ` <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,0C5.37,0,0,5.37,0,12s5.37,12,12,12,12-5.37,12-12S18.63,0,12,0Zm7.92,12.38c-.05,.12-.12,.23-.22,.33l-7,7c-.2,.2-.45,.29-.71,.29s-.51-.1-.71-.29c-.39-.39-.39-1.02,0-1.41l5.29-5.29H5c-.55,0-1-.45-1-1s.45-1,1-1h11.59l-5.29-5.29c-.39-.39-.39-1.02,0-1.41s1.02-.39,1.41,0l7,7c.09,.09,.17,.2,.22,.33,.1,.24,.1,.52,0,.76Z" /></svg>`;
                 e.appendChild(Enter);
 
-                if (
-                    !e.classList.contains('modtype_page') &&
-                    !e.classList.contains('modtype_resource')
-                ) {
+                // =============================================================
+                // atividade - icone nos recursos (menos page e resource)
+                // =============================================================
+
+                const type = Object.keys(e.classList).find((i) => {
+                    return e.classList[i].indexOf('modtype_') != -1;
+                });
+                const modtype = e.classList[type].replace('modtype_', '');
+                if (modtype !== 'resource' && modtype !== 'page') {
                     const Icon = document.createElement('div');
-                    Icon.className = 'mosaic_activity_icon';
-
-                    if (e.classList.contains('modtype_forum')) {
-                        Icon.innerHTML = `<span class="material-symbols-outlined">chat</span>`;
-                    }
-
-                    if (e.classList.contains('modtype_quiz')) {
-                        Icon.innerHTML = `<span class="material-symbols-outlined">quiz</span>`;
-                    }
-
-                    if (e.classList.contains('modtype_assign')) {
-                        Icon.innerHTML = `<span class="material-symbols-outlined">edit</span>`;
-                    }
-
+                    Icon.className = 'mosaic_icon ' + modtype;
                     e.querySelector('.activityname a').appendChild(Icon);
                 }
             });
 
             // =================================================================
-            // botao entrar/sair da sessao
+            // atividade - botao entrar/sair
             // =================================================================
 
             const number = each.getAttribute('data-number');
@@ -222,13 +222,9 @@ if (courseSection && courseSection.length) {
                         const back = document.querySelector(
                             '[data-key="coursehome"] .nav-link'
                         ).href;
-                        Back.onclick = () => {
-                            self.location.href = back;
-                        };
+                        Back.onclick = () => (self.location.href = back);
                     } else {
-                        Enter.onclick = () => {
-                            self.location.href = href;
-                        };
+                        Enter.onclick = () => (self.location.href = href);
                     }
                 } else {
                     const sectioname = each.querySelector('.sectionname');
@@ -246,7 +242,7 @@ if (courseSection && courseSection.length) {
         }
 
         // =====================================================================
-        // retrátil para atividades dividindo por rótulo com h3 dentro
+        // atividade - retrátil dividindo por rótulo com h4 dentro
         // =====================================================================
 
         /*
@@ -303,7 +299,7 @@ if (courseSection && courseSection.length) {
 }
 
 // =============================================================================
-// coloca squares dentro do topic geral
+// quadrados
 // =============================================================================
 
 const start = document.querySelector('#mosaic_start');
