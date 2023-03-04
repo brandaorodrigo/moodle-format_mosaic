@@ -245,56 +245,53 @@ if (courseSection && courseSection.length) {
         // atividade - retrátil dividindo por rótulo com h4 dentro
         // =====================================================================
 
-        /*
-            const li = each.querySelectorAll('[data-for="cmlist"] li');
-            if (li && li.length) {
-                const content = [];
-                let i = -1;
-                li.forEach((e) => {
-                    if (
-                        e.className.indexOf('modtype_label') != -1 &&
-                        e.querySelector('h4')
-                    ) {
-                        content.push({ element: e, child: [] });
-                        i = i + 1;
-                    } else {
-                        content[i]?.child?.push(e);
-                    }
-                });
-                const List = document.createElement('ul');
-                List.className = 'activities_refactor';
-                each.append(List);
-                content.forEach(({ element, child }, index) => {
-                    element.onclick = () => {
-                        const all =
-                            document.querySelectorAll('.activities_sub');
-                        all.forEach((a) => {
-                            a.style.display = 'none';
-                        });
-                        document.querySelector(
-                            '#activities_sub_' + index
-                        ).style.display = 'block';
-                    };
-
-                    List.append(element);
-                    const Sub = document.createElement('ul');
-                    Sub.className = 'activities_sub';
-                    Sub.id = 'activities_sub_' + index;
-                    element.append(Sub);
-                    const pill = [];
-                    child.forEach((c) => {
-                        const found = c.querySelector(
-                            '.badge-pill:last-child strong'
-                        );
-                        if (found) pill.push(found);
-                        Sub.appendChild(c);
+        const li = each.querySelectorAll('[data-for="cmlist"] li');
+        if (li && li.length) {
+            const content = [];
+            let i = -1;
+            li.forEach((e) => {
+                if (
+                    e.className.indexOf('modtype_label') != -1 &&
+                    e.querySelector('h4')
+                ) {
+                    content.push({ element: e, child: [] });
+                    i = i + 1;
+                } else {
+                    content[i]?.child?.push(e);
+                }
+            });
+            const List = document.createElement('ul');
+            List.className = 'activities_refactor';
+            each.append(List);
+            content.forEach(({ element, child }, index) => {
+                element.onclick = () => {
+                    const all = document.querySelectorAll('.activities_sub');
+                    all.forEach((a) => {
+                        a.style.display = 'none';
                     });
-                    if (pill && pill.length) {
-                        appendActivityPercent(pill, element);
-                    }
+                    document.querySelector(
+                        '#activities_sub_' + index
+                    ).style.display = 'block';
+                };
+
+                List.append(element);
+                const Sub = document.createElement('ul');
+                Sub.className = 'activities_sub';
+                Sub.id = 'activities_sub_' + index;
+                element.append(Sub);
+                const pill = [];
+                child.forEach((c) => {
+                    const found = c.querySelector(
+                        '.badge-pill:last-child strong'
+                    );
+                    if (found) pill.push(found);
+                    Sub.appendChild(c);
                 });
-            }
-            */
+                if (pill && pill.length) {
+                    appendActivityPercent(pill, element);
+                }
+            });
+        }
     });
 }
 

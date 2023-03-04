@@ -20,9 +20,12 @@ if (notEditingRenderer) {
         'body.format-mosaic:not(#page-course-view-mosaic)'
     );
     if (insideCourse) {
+        const href = document.querySelector(
+            '.breadcrumb .breadcrumb-item:first-child a'
+        )?.href;
         const Back = document.createElement('button');
         Back.className = 'button_back_course';
-        Back.onclick = () => history.back();
+        Back.onclick = () => (location.href = href);
         Back.innerHTML = `<i class="icon fa fa-home"></i> Voltar para página inicial`;
         insideCourse.append(Back);
     }

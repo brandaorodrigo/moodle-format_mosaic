@@ -2,21 +2,21 @@
 /* remove elementos nao usados no mosaico */
 /* ========================================================================== */
 
-#page-course-view-mosaic:not(.editing) #collapsesections,
-#page-course-view-mosaic:not(.editing) #page-footer,
-#page-course-view-mosaic:not(.editing) #maincontent,
-#page-course-view-mosaic:not(.editing) #page-header,
-#page-course-view-mosaic:not(.editing) .drawer.drawer-left,
-#page-course-view-mosaic:not(.editing) .course-section-header .icon,
-#page-course-view-mosaic:not(.editing) .drawer-toggles .drawer-left-toggle,
-#page-course-view-mosaic:not(.editing) .icons-collapse-expand,
-#page-course-view-mosaic:not(.editing) .section-summary-activities,
-#page-course-view-mosaic:not(.editing) .modal-backdrop.show,
-#page-course-view-mosaic:not(.editing) .secondary-navigation,
-#page-course-view-mosaic:not(.editing) .section_availability,
-#page-course-view-mosaic:not(.editing) .activityiconcontainer.courseicon,
-#page-course-view-mosaic:not(.editing) [data-region='completion-info'],
-#page-course-view-mosaic:not(.editing)
+#page-course-view-mosaic #collapsesections,
+#page-course-view-mosaic #page-footer,
+#page-course-view-mosaic #maincontent,
+#page-course-view-mosaic #page-header,
+#page-course-view-mosaic .drawer.drawer-left,
+#page-course-view-mosaic .course-section-header .icon,
+#page-course-view-mosaic .drawer-toggles .drawer-left-toggle,
+#page-course-view-mosaic .icons-collapse-expand,
+#page-course-view-mosaic .section-summary-activities,
+#page-course-view-mosaic .modal-backdrop.show,
+#page-course-view-mosaic .secondary-navigation,
+#page-course-view-mosaic .section_availability,
+#page-course-view-mosaic .activityiconcontainer.courseicon,
+#page-course-view-mosaic [data-region='completion-info'],
+#page-course-view-mosaic
     .activity-item
     .activitytitle
     .media-body
@@ -28,7 +28,7 @@
 /* esconde pagina inteira até terminar o carregamento */
 /* ========================================================================== */
 
-#page-course-view-mosaic:not(.editing) #page-content {
+#page-course-view-mosaic #page-content {
     display: none;
 }
 
@@ -110,7 +110,7 @@
 /* formato de curso mosaico */
 /* ========================================================================== */
 
-#page-course-view-mosaic:not(.editing)
+#page-course-view-mosaic
     #page.drawers
     #topofscroll
     #page-content.main-inner
@@ -119,8 +119,8 @@
 }
 
 .course-content ul.mosaic {
-    margin: 46px 0 0 0;
-    min-height: calc(100vh - 46px);
+    margin: 0;
+    min-height: calc(100vh - 60px);
     padding: 0;
     position: relative;
     width: 100vw;
@@ -128,6 +128,10 @@
 
 .course-content .single-section {
     margin: 0;
+}
+
+#page-course-view-mosaic div[role='main'] {
+    padding: 0 !important;
 }
 
 /* ========================================================================== */

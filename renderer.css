@@ -17,98 +17,83 @@
 }
 
 /* ========================================================================== */
-/* tema com largura 100% geral */
+/* botao voltar para pagina inicial */
 /* ========================================================================== */
-
-#page.drawers,
-#page.drawers.show-drawer-left {
-    height: auto;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow-x: hidden;
-}
-
-#page.drawers #topofscroll #page-content.main-inner {
-    overflow-x: hidden;
-}
-
-#page.drawers #topofscroll #page-content.main-inner #region-main {
-    border-radius: 0 !important;
-    margin: 0 !important;
-    max-width: none !important;
-    overflow: hidden !important;
-    padding: 26px !important;
-    width: 100vw !important;
-}
-
-.page-header-image,
-#page-footer,
-.drawer-toggles .drawer-left-toggle {
-    display: none;
-}
-
-/* ========================================================================== */
-/* modulo de pagina */
-/* ========================================================================== */
-
-#page-mod-page-view #page-header,
-#page-mod-page-view #page-footer,
-#page-mod-page-view .secondary-navigation,
-#page-mod-page-view .activity-header,
-#page-mod-page-view .modified,
-#page-mod-resource-view #page-header,
-#page-mod-resource-view #page-footer,
-#page-mod-resource-view .secondary-navigation,
-#page-mod-resource-view .activity-header,
-#page-mod-resource-view .modified {
-    display: none;
-}
-
-#page-mod-page-view
-    #page.drawers
-    #topofscroll
-    #page-content.main-inner
-    #region-main,
-#page-mod-resource-view
-    #page.drawers
-    #topofscroll
-    #page-content.main-inner
-    #region-main {
-    padding: 0 !important;
-    overflow-x: hidden;
-}
-
-#page-mod-page-view .generalbox,
-#page-mod-resource-view .generalbox {
-    margin: 0 !important;
-    min-height: calc(100vh - 48px);
-    padding: 0 !important;
-}
 
 .button_back_course {
     background: none;
     border: 0;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 25px;
     position: absolute;
     right: 22px;
-    top: 66px;
+    top: 75px;
     z-index: 999;
 }
 
-.button_back_course span.material-symbols-outlined {
+.button_back_course svg {
     float: left;
-    font-size: 20;
+    width: 24px;
     margin-right: 6px;
 }
 
-.pagelayout-standard #page.drawers .main-inner,
-body.limitedwidth #page.drawers .main-inner {
-    max-width: none !important;
-}
+/* ========================================================================== */
+/* largura 100% */
+/* ========================================================================== */
 
-#page.drawers div[role='main'],
-#page.drawers .main-inner {
+#page,
+.main-inner,
+#page-header,
+.show-drawer-left {
+    max-width: none !important;
     padding: 0 !important;
     margin: 0 !important;
+    overflow-x: hidden !important;
+}
+
+#page {
+    height: calc(100vh - 60px);
+    margin-top: 60px !important;
+}
+
+#page-header {
+    padding: 10px 20px 0 20px !important;
+}
+
+.drawer-left,
+.drawer-toggles,
+.modal-backdrop,
+.page-header-image,
+.btn-footer-popover {
+    display: none !important;
+}
+
+.secondary-navigation .navigation .nav-tabs {
+    max-width: none;
+}
+
+/* ========================================================================== */
+/* button */
+/* ========================================================================== */
+
+.btn {
+    border-radius: 0 !important;
+}
+
+/* ========================================================================== */
+/* page e resource */
+/* ========================================================================== */
+
+#page-mod-resource-view .resourcecontent,
+#page-mod-page-view div[role='main'] {
+    background-color: #fff !important;
+    height: calc(100vh - 60px) !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 100vw !important;
+}
+
+#page-mod-page-view div[role='main'] .modified {
+    display: none;
 }
