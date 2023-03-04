@@ -57,6 +57,22 @@ class format_mosaic extends format_topics
             'base64_s4_hover',
             'base64_s4_full',
 
+            'base64_icon_database',
+            'base64_icon_chat',
+            'base64_icon_choice',
+            'base64_icon_external',
+            'base64_icon_forum',
+            'base64_icon_glossario',
+            'base64_icon_h5p',
+            'base64_icon_laboratorio',
+            'base64_icon_licao',
+            'base64_icon_scorm',
+            'base64_icon_pesquisa',
+            'base64_icon_pesquisaavaliacao',
+            'base64_icon_questionario',
+            'base64_icon_tarefa',
+            'base64_icon_wiki',
+
             'css_extra'
         ];
 
