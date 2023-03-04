@@ -119,7 +119,7 @@
 }
 
 .course-content ul.mosaic {
-    margin: 0;
+    margin: 46px 0 0 0;
     min-height: calc(100vh - 46px);
     padding: 0;
     position: relative;
@@ -608,5 +608,9 @@
 
     .activities_sub {
         display: none;
+    }
+
+    #page-course-view-mosaic #page-content {
+        padding: 0 !important;
     }
 }

@@ -20,22 +20,19 @@
 /* tema com largura 100% geral */
 /* ========================================================================== */
 
-body:not(.editing) #page.drawers,
-body:not(.editing) #page.drawers.show-drawer-left {
+#page.drawers,
+#page.drawers.show-drawer-left {
     height: auto;
     margin: 0 !important;
     padding: 0 !important;
+    overflow-x: hidden;
 }
 
-body:not(.editing) #page.drawers #topofscroll #page-content.main-inner {
-    overflow: hidden;
+#page.drawers #topofscroll #page-content.main-inner {
+    overflow-x: hidden;
 }
 
-body:not(.editing)
-    #page.drawers
-    #topofscroll
-    #page-content.main-inner
-    #region-main {
+#page.drawers #topofscroll #page-content.main-inner #region-main {
     border-radius: 0 !important;
     margin: 0 !important;
     max-width: none !important;
@@ -44,9 +41,9 @@ body:not(.editing)
     width: 100vw !important;
 }
 
-body:not(.editing) .page-header-image,
-body:not(.editing) #page-footer,
-body:not(.editing) .drawer-toggles .drawer-left-toggle {
+.page-header-image,
+#page-footer,
+.drawer-toggles .drawer-left-toggle {
     display: none;
 }
 
@@ -54,34 +51,35 @@ body:not(.editing) .drawer-toggles .drawer-left-toggle {
 /* modulo de pagina */
 /* ========================================================================== */
 
-body#page-mod-page-view:not(.editing) #page-header,
-body#page-mod-page-view:not(.editing) #page-footer,
-body#page-mod-page-view:not(.editing) .secondary-navigation,
-body#page-mod-page-view:not(.editing) .activity-header,
-body#page-mod-page-view:not(.editing) .modified,
-body#page-mod-resource-view:not(.editing) #page-header,
-body#page-mod-resource-view:not(.editing) #page-footer,
-body#page-mod-resource-view:not(.editing) .secondary-navigation,
-body#page-mod-resource-view:not(.editing) .activity-header,
-body#page-mod-resource-view:not(.editing) .modified {
+#page-mod-page-view #page-header,
+#page-mod-page-view #page-footer,
+#page-mod-page-view .secondary-navigation,
+#page-mod-page-view .activity-header,
+#page-mod-page-view .modified,
+#page-mod-resource-view #page-header,
+#page-mod-resource-view #page-footer,
+#page-mod-resource-view .secondary-navigation,
+#page-mod-resource-view .activity-header,
+#page-mod-resource-view .modified {
     display: none;
 }
 
-body#page-mod-page-view:not(.editing)
+#page-mod-page-view
     #page.drawers
     #topofscroll
     #page-content.main-inner
     #region-main,
-body#page-mod-resource-view:not(.editing)
+#page-mod-resource-view
     #page.drawers
     #topofscroll
     #page-content.main-inner
     #region-main {
     padding: 0 !important;
+    overflow-x: hidden;
 }
 
-body#page-mod-page-view:not(.editing) .generalbox,
-body#page-mod-resource-view:not(.editing) .generalbox {
+#page-mod-page-view .generalbox,
+#page-mod-resource-view .generalbox {
     margin: 0 !important;
     min-height: calc(100vh - 48px);
     padding: 0 !important;
@@ -102,4 +100,15 @@ body#page-mod-resource-view:not(.editing) .generalbox {
     float: left;
     font-size: 20;
     margin-right: 6px;
+}
+
+.pagelayout-standard #page.drawers .main-inner,
+body.limitedwidth #page.drawers .main-inner {
+    max-width: none !important;
+}
+
+#page.drawers div[role='main'],
+#page.drawers .main-inner {
+    padding: 0 !important;
+    margin: 0 !important;
 }

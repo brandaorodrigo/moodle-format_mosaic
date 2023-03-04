@@ -10,18 +10,6 @@ theme.media = 'all';
 document.head.appendChild(theme);
 
 // =============================================================================
-// importa material icons
-// =============================================================================
-
-const material = document.createElement('link');
-material.rel = 'stylesheet';
-material.type = 'text/css';
-material.href =
-    'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0';
-material.media = 'all';
-document.head.appendChild(material);
-
-// =============================================================================
 // funcao para exibir ou ocultar sessao
 // =============================================================================
 
@@ -319,9 +307,13 @@ if (courseSection && courseSection.length) {
 // =============================================================================
 
 const start = document.querySelector('#mosaic_start');
-document.querySelector('#section-0').append(start);
+if (start) {
+    document.querySelector('#section-0').append(start);
+}
 const squares = document.querySelector('#mosaic_squares');
-document.querySelector('#section-0').append(squares);
+if (squares) {
+    document.querySelector('#section-0').append(squares);
+}
 
 // =============================================================================
 // quando carrega a tela verifica se existe hash de sessao aberta
