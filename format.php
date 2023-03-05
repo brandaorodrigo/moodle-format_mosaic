@@ -8,13 +8,15 @@ global $PAGE;
 
 if (!$PAGE->user_is_editing()) {
 
+    $PAGE->requires->js('/course/format/mosaic/format.js');
+
     function b64($name)
     {
         global $CFG, $course;
-        return $CFG->wwwroot . '/course/format/mosaic/call_img.php?name=base64_' . $name . '&id=' . $course->id;
+        return $CFG->wwwroot . '/course/format/mosaic/img.php?name=base64_' . $name . '&id=' . $course->id;
     }
 
-    $PAGE->requires->js('/course/format/mosaic/format.js');
+    // echo '<style>' . file_get_contents($CFG->dirroot . '/course/format/mosaic/format.css') . '</style>';
 
 ?>
     <style>

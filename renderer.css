@@ -145,6 +145,7 @@ button.close:focus,
 
 .btn {
     border-radius: 0 !important;
+    max-height: 36px;
 }
 
 #page a.btn-primary {
@@ -169,4 +170,17 @@ button.close:focus,
 
 #page-mod-page-view div[role='main'] .modified {
     display: none !important;
+}
+
+/* ========================================================================== */
+
+#page-wrapper #page {
+    margin: 0 !important;
+}
+
+#page.drawers #topofscroll #page-content.main-inner #region-main {
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    width: auto !important;
+    max-width: none !important;
 }
