@@ -28,8 +28,13 @@
 /* esconde pagina inteira até terminar o carregamento */
 /* ========================================================================== */
 
-#page-course-view-mosaic #page-content {
+#page-content {
+    transition: display 0.4s;
     display: none;
+}
+
+#page-content.loaded {
+    display: block;
 }
 
 /* ========================================================================== */
@@ -265,7 +270,7 @@
 .course-content #section-0 h3 {
     font-size: 42px !important;
     line-height: 48px !important;
-    font-weight: 900 !important;
+    font-weight: 700 !important;
     letter-spacing: -1.5px;
 }
 
@@ -319,7 +324,7 @@
     color: #ffffff;
     */
     color: #111;
-    font-size: 13px;
+    font-size: 14px;
     margin: 6px 0 6px 0;
     padding: 4px 6px;
 }

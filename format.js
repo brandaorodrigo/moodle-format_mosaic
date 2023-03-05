@@ -1,15 +1,4 @@
 // =============================================================================
-// importa css
-// =============================================================================
-
-const theme = document.createElement('link');
-theme.rel = 'stylesheet';
-theme.type = 'text/css';
-theme.href = '/course/format/mosaic/format.css';
-theme.media = 'all';
-document.head.appendChild(theme);
-
-// =============================================================================
 // funcao - exibe ou oculta sessao
 // =============================================================================
 

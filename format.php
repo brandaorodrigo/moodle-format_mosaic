@@ -20,13 +20,15 @@ if (!$PAGE->user_is_editing()) {
 
 ?>
     <style>
+        <?php echo file_get_contents($CFG->dirroot . '/course/format/mosaic/format.css') ?>
+    </style>
+    <style>
         #page-course-view-mosaic #page-content {
             display: none;
         }
 
         #section-0,
         .button_enter_section {
-
             background-color: <?php echo $course->color ?> !important;
         }
 
