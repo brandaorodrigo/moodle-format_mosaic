@@ -16,13 +16,6 @@ if (!$PAGE->user_is_editing()) {
 
     $PAGE->requires->js('/course/format/mosaic/format.js');
 
-
-    session_start();
-
-    var_dump($_SESSION);
-
-    echo 'rodrigo' . $_SESSION['subsection'];
-
 ?>
     <style>
         .squares .square:nth-child(1) {
