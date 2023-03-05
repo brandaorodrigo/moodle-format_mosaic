@@ -4,8 +4,6 @@ defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->dirroot . '/course/format/topics/format.php');
 
-$_SESSION['color'] = $course->color;
-
 global $PAGE;
 
 if (!$PAGE->user_is_editing()) {
@@ -20,23 +18,13 @@ if (!$PAGE->user_is_editing()) {
 
 ?>
     <style>
+        :root {
+            --course-color: <?php echo $course->color ?>;
+        }
+
         <?php echo file_get_contents($CFG->dirroot . '/course/format/mosaic/format.css') ?>
     </style>
     <style>
-        #page-course-view-mosaic #page-content {
-            display: none;
-        }
-
-        #section-0,
-        .button_enter_section {
-            background-color: <?php echo $course->color ?> !important;
-        }
-
-        .progress_activity,
-        .moisaic_activity_enter {
-            fill: <?php echo $course->color ?>;
-        }
-
         .squares .square:nth-child(1) {
             background-image: url(<?php echo b64('q1') ?>);
         }

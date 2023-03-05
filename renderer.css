@@ -124,6 +124,12 @@ button.close:focus,
     border-radius: 0 !important;
 }
 
+.btn-primary {
+    background: var(--course-color) !important;
+    border: 0 !important;
+    color: #fff !important;
+}
+
 /* ========================================================================== */
 /* pagina e arquivo */
 /* ========================================================================== */
@@ -140,4 +146,26 @@ button.close:focus,
 
 #page-mod-page-view div[role='main'] .modified {
     display: none !important;
+}
+
+/* ========================================================================== */
+/* cor do curso */
+/* ========================================================================== */
+
+#page a.nav-link:not(.active),
+#page .breadcrumb-item a {
+    color: var(--course-color) !important;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background: var(--course-color) !important;
+    border: 0 !important;
+}
+
+.moremenu .nav-link.active {
+    border-bottom-color: var(--course-color) !important;
+}
+
+.btn-link {
+    color: var(--course-color) !important;
 }

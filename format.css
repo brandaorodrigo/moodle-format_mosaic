@@ -25,19 +25,6 @@
 }
 
 /* ========================================================================== */
-/* esconde pagina inteira até terminar o carregamento */
-/* ========================================================================== */
-
-#page-content {
-    transition: display 0.4s;
-    display: none;
-}
-
-#page-content.loaded {
-    display: block;
-}
-
-/* ========================================================================== */
 /* quadrados pequenos do mosaico */
 /* ========================================================================== */
 
@@ -346,6 +333,7 @@
     float: right !important;
     width: 24px !important;
     padding: 0 !important;
+    fill: var(--course-color);
     position: absolute !important;
     top: -2px;
     right: 0;
@@ -363,6 +351,7 @@
 .progress_activity {
     float: left;
     width: 20px;
+    fill: var(--course-color);
     height: 27px;
 }
 
@@ -391,7 +380,7 @@
 /* ========================================================================== */
 
 .button_enter_section {
-    background-color: #111;
+    background-color: var(--course-color);
     border: 0;
     color: #fefefe;
     display: none;
@@ -458,6 +447,7 @@
         border-bottom: 0;
         border-left: 0;
         border-top: 0;
+        background-color: var(--course-color);
         height: 100%;
         padding: 80px 4% 0 4% !important;
     }

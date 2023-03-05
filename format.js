@@ -305,11 +305,3 @@ if (self.location.hash.indexOf('#section') !== -1) {
     const hash = self.location.hash.split('#');
     onChangeSection('#' + hash[1], true);
 }
-
-// =============================================================================
-// exibe conteudo depois de tudo carregado
-// =============================================================================
-
-setTimeout(() => {
-    document.querySelector('#page-content').style.display = 'block';
-}, 400);

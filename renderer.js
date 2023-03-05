@@ -18,8 +18,4 @@ if (notEditingRenderer) {
         Back.innerHTML = `<i class="icon fa fa-home"></i> Voltar para página inicial`;
         insideCourse.append(Back);
     }
-
-    setTimeout(() => {
-        document.querySelector('#page-content').classList.add('loaded');
-    }, 1000);
 }
