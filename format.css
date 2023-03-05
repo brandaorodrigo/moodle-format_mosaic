@@ -3,18 +3,18 @@
 /* ========================================================================== */
 
 #page-course-view-mosaic #collapsesections,
-#page-course-view-mosaic #page-footer,
 #page-course-view-mosaic #maincontent,
+#page-course-view-mosaic #page-footer,
 #page-course-view-mosaic #page-header,
-#page-course-view-mosaic .drawer.drawer-left,
+#page-course-view-mosaic .activityiconcontainer.courseicon,
 #page-course-view-mosaic .course-section-header .icon,
 #page-course-view-mosaic .drawer-toggles .drawer-left-toggle,
+#page-course-view-mosaic .drawer.drawer-left,
 #page-course-view-mosaic .icons-collapse-expand,
-#page-course-view-mosaic .section-summary-activities,
 #page-course-view-mosaic .modal-backdrop.show,
 #page-course-view-mosaic .secondary-navigation,
+#page-course-view-mosaic .section-summary-activities,
 #page-course-view-mosaic .section_availability,
-#page-course-view-mosaic .activityiconcontainer.courseicon,
 #page-course-view-mosaic [data-region='completion-info'],
 #page-course-view-mosaic
     .activity-item
@@ -93,9 +93,9 @@
 }
 
 .mosaic_start svg {
-    width: 24px;
     fill: #fff;
     margin: 0 0 0 6px;
+    width: 24px;
 }
 
 /* ========================================================================== */
@@ -132,9 +132,9 @@
 
 .available_percent {
     display: block;
+    float: left;
     font-size: 12px;
     font-weight: 800;
-    float: left;
     width: 36%;
 }
 
@@ -156,9 +156,9 @@
 
 .available_percent .completed {
     background: #111;
+    border-radius: 0 4px 4px 0;
     display: block;
     height: 5px;
-    border-radius: 0 4px 4px 0;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -166,13 +166,13 @@
 
 .activity .available_percent {
     position: absolute !important;
-    right: 0 !important;
-    top: 0 !important;
+    right: -5px !important;
+    top: 8px !important;
 }
 
 .activity .available_percent {
-    width: 33px;
     padding: 0 !important;
+    width: 30px;
 }
 
 /* ========================================================================== */
@@ -192,18 +192,18 @@
 
 .mosaic_header .available_date {
     align-items: center;
-    height: 18px;
     display: table-cell;
-    font-size: 12px;
-    margin-top: 10px;
     float: right;
+    font-size: 12px;
     font-weight: 400;
+    height: 18px;
     line-height: 18px;
+    margin-top: 10px;
 }
 
 .mosaic_header .available_date svg {
-    margin: -1px 0 0 8px;
     float: right;
+    margin: -1px 0 0 8px;
     width: 18px;
 }
 
@@ -269,17 +269,22 @@
 
 .course-content #section-0 h3 {
     font-size: 42px !important;
-    line-height: 48px !important;
     font-weight: 700 !important;
     letter-spacing: -1.5px;
+    line-height: 48px !important;
 }
 
 .course-content h4 {
     border-top: 2px solid #eee;
+    cursor: pointer;
     font-size: 14px !important;
     line-height: 30px !important;
-    margin: 28px 0 0 0 !important;
+    margin: 0 !important;
     padding: 10px 0 0 0 !important;
+}
+
+.course-content h4:hover {
+    text-decoration: underline;
 }
 
 .course-content .modtype_label:first-child h4 {
@@ -348,14 +353,15 @@
 }
 
 .moisaic_activity_enter {
-    float: right !important;
-    width: 24px !important;
-    padding: 0 !important;
+    cursor: pointer;
     fill: var(--course-color);
-    position: absolute !important;
-    top: -2px;
-    right: 0;
+    float: right !important;
     height: 24px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    right: 0;
+    top: -2px;
+    width: 24px !important;
 }
 
 .moisaic_activity_enter svg {
@@ -367,10 +373,10 @@
 /* ========================================================================== */
 
 .progress_activity {
-    float: left;
-    width: 20px;
     fill: var(--course-color);
+    float: left;
     height: 27px;
+    width: 20px;
 }
 
 .progress_activity div {
@@ -386,11 +392,11 @@
 /* ========================================================================== */
 
 .mosaic_icon {
+    background-size: 100% 100%;
     float: left;
+    height: 22px;
     margin: 0 4px 0 8px;
     width: 22px;
-    height: 22px;
-    background-size: 100% 100%;
 }
 
 /* ========================================================================== */
@@ -416,6 +422,7 @@
     background: none;
     border: 0;
     display: none;
+    height: 28px;
     line-height: 1;
     margin: 0;
     padding: 0;
@@ -423,7 +430,6 @@
     right: 22px;
     top: 22px;
     width: 28px;
-    height: 28px;
 }
 
 .button_back_section span {
@@ -447,25 +453,25 @@
     .course-content ul.mosaic li.section {
         background-repeat: no-repeat !important;
         background-size: 100% 100% !important;
-        border: 1px solid #f8f8f8;
         background: #fff;
+        border: 1px solid #f8f8f8;
         display: block;
         height: 50%;
         left: 0;
-        padding: 4% !important;
         overflow: auto;
+        padding: 4% !important;
         position: absolute;
         top: 0;
+        transition: width 0.4s, height 0.4s;
         width: 33.333%;
         z-index: 99;
-        transition: width 0.4s, height 0.4s;
     }
 
     #section-0 {
+        background-color: var(--course-color);
         border-bottom: 0;
         border-left: 0;
         border-top: 0;
-        background-color: var(--course-color);
         height: 100%;
         padding: 80px 4% 0 4% !important;
     }

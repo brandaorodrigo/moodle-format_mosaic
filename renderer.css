@@ -99,8 +99,8 @@ button.close:focus,
 
 .button_back_course svg {
     float: left;
-    width: 24px;
     margin-right: 6px;
+    width: 24px;
 }
 
 /* ========================================================================== */
@@ -111,11 +111,11 @@ button.close:focus,
 .main-inner,
 #page-header,
 .show-drawer-left {
-    max-width: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
     border-radius: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
     overflow-x: hidden !important;
+    padding: 0 !important;
 }
 
 #page {
