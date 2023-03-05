@@ -2,6 +2,8 @@
 
 session_start();
 
-if (!@$_GET['name'] || !@$_GET['value']) return;
+if (!@$_GET['name']) return;
 
-$_SESSION[$_GET['name']] = $_GET['value'];
+$_SESSION[$_GET['name']] = @$_GET['value'];
+
+var_dump($_SESSION);

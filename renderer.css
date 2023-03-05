@@ -114,6 +114,7 @@ button.close:focus,
     max-width: none !important;
     padding: 0 !important;
     margin: 0 !important;
+    border-radius: 0 !important;
     overflow-x: hidden !important;
 }
 

@@ -23,6 +23,30 @@ const onChangeSection = (number, action) => {
 };
 
 // =============================================================================
+// funcao - exibe ou oculta subsessao
+// =============================================================================
+
+const onChangeSubSection = (number) => {
+    const all = document.querySelectorAll('.activities_sub');
+    all.forEach((a) => (a.style.display = 'none'));
+    const current = document.querySelector('#activities_sub_' + number);
+    if (current) {
+        current.style.display = 'block';
+        document.cookie = `subsection=${number}; max-age=3600; path=/;`;
+    }
+};
+
+// =============================================================================
+// funcao - recurar cookie
+// =============================================================================
+
+const getCookie = (name) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+};
+
+// =============================================================================
 // funcao - exibe barra de porcentagem
 // =============================================================================
 
@@ -61,6 +85,8 @@ const appendActivityPercent = (pill, element) => {
         appendAvailablePercent(0, element);
     }
 };
+
+console.log(document.cookie);
 
 // =============================================================================
 // módulos
@@ -253,16 +279,8 @@ if (courseSection && courseSection.length) {
             List.className = 'activities_refactor';
             each.append(List);
             content.forEach(({ element, child }, index) => {
-                element.onclick = () => {
-                    const all = document.querySelectorAll('.activities_sub');
-                    all.forEach((a) => {
-                        a.style.display = 'none';
-                    });
-                    document.querySelector(
-                        '#activities_sub_' + index
-                    ).style.display = 'block';
-                };
-
+                element.querySelector('h4').onclick = () =>
+                    onChangeSubSection(index);
                 List.append(element);
                 const Sub = document.createElement('ul');
                 Sub.className = 'activities_sub';
@@ -304,4 +322,6 @@ if (squares) {
 if (self.location.hash.indexOf('#section') !== -1) {
     const hash = self.location.hash.split('#');
     onChangeSection('#' + hash[1], true);
+    const subsection = getCookie('subsection');
+    if (subsection) onChangeSubSection(subsection);
 }
