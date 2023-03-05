@@ -291,6 +291,11 @@
     padding: 0 !important;
 }
 
+.course-content .activity-item.activityinline a,
+.course-content .activity-item:not(.activityinline) a {
+    font-weight: normal !important;
+}
+
 .course-content div[data-for='sectioninfo'] {
     font-size: 14px;
     margin: 16px 0 0 0 !important;
