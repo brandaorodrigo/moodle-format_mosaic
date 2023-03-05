@@ -92,6 +92,11 @@
     font-weight: bold;
 }
 
+.mosaic_start focus:hover,
+.mosaic_start active:hover {
+    background: none !important;
+}
+
 .mosaic_start svg {
     fill: #fff;
     margin: 0 0 0 6px;
