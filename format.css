@@ -86,7 +86,7 @@
 }
 
 .mosaic_start a {
-    color: #fff;
+    color: #fff !important;
     fill: #fff;
     font-size: 15px;
     font-weight: bold;
@@ -553,10 +553,6 @@
         position: absolute;
         left: 4vw;
         top: calc(50% - 130px);
-    }
-
-    .mosaic_start a {
-        color: #fff !important;
     }
 
     .course-content .single-section {
