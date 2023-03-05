@@ -2,6 +2,8 @@
 // funcao - exibe ou oculta sessao
 // =============================================================================
 
+console.log(document.cookie);
+
 const onChangeSection = (number, action) => {
     const section = document.querySelector(number);
     if (section) {
@@ -11,12 +13,14 @@ const onChangeSection = (number, action) => {
             self.location.hash = number;
             section.classList.add('section-open');
             ul.classList.add('force-display');
+            document.cookie = `section=${number}; max-age=3600; path=/;`;
         } else {
             self.location.hash = '';
             section.classList.remove('section-open');
             ul.classList.remove('force-display');
             setTimeout(() => {
                 section.style.zIndex = 99;
+                document.cookie = `section=undefined; max-age=3600; path=/;`;
             }, 400);
         }
     }
@@ -34,16 +38,6 @@ const onChangeSubSection = (number) => {
         current.style.display = 'block';
         document.cookie = `subsection=${number}; max-age=3600; path=/;`;
     }
-};
-
-// =============================================================================
-// funcao - recurar cookie
-// =============================================================================
-
-const getCookie = (name) => {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
 };
 
 // =============================================================================
@@ -176,7 +170,7 @@ if (courseSection && courseSection.length) {
                 const Enter = document.createElement('div');
                 Enter.className = 'moisaic_activity_enter';
                 Enter.onclick = () => (location.href = a.href);
-                Enter.innerHTML = ` <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,0C5.37,0,0,5.37,0,12s5.37,12,12,12,12-5.37,12-12S18.63,0,12,0Zm7.92,12.38c-.05,.12-.12,.23-.22,.33l-7,7c-.2,.2-.45,.29-.71,.29s-.51-.1-.71-.29c-.39-.39-.39-1.02,0-1.41l5.29-5.29H5c-.55,0-1-.45-1-1s.45-1,1-1h11.59l-5.29-5.29c-.39-.39-.39-1.02,0-1.41s1.02-.39,1.41,0l7,7c.09,.09,.17,.2,.22,.33,.1,.24,.1,.52,0,.76Z" /></svg>`;
+                Enter.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,0C5.37,0,0,5.37,0,12s5.37,12,12,12,12-5.37,12-12S18.63,0,12,0Zm7.92,12.38c-.05,.12-.12,.23-.22,.33l-7,7c-.2,.2-.45,.29-.71,.29s-.51-.1-.71-.29c-.39-.39-.39-1.02,0-1.41l5.29-5.29H5c-.55,0-1-.45-1-1s.45-1,1-1h11.59l-5.29-5.29c-.39-.39-.39-1.02,0-1.41s1.02-.39,1.41,0l7,7c.09,.09,.17,.2,.22,.33,.1,.24,.1,.52,0,.76Z" /></svg>`;
                 e.appendChild(Enter);
 
                 // =============================================================
@@ -315,12 +309,16 @@ if (squares) {
 }
 
 // =============================================================================
-// quando carrega a tela verifica se existe hash de sessao aberta
+// quando carrega a tela verifica se existe cookie de sessao aberta
 // =============================================================================
 
-if (self.location.hash.indexOf('#section') !== -1) {
-    const hash = self.location.hash.split('#');
-    onChangeSection('#' + hash[1], true);
-    const subsection = getCookie('subsection');
-    if (subsection) onChangeSubSection(subsection);
-}
+const getCookie = (name) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+};
+
+const section = getCookie('section');
+if (section) onChangeSection(section, true);
+const subsection = getCookie('subsection');
+if (subsection) onChangeSubSection(subsection);
