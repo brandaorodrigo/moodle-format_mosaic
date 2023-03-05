@@ -10,7 +10,7 @@ if (!$PAGE->user_is_editing()) {
     $PAGE->requires->css('/course/format/mosaic/css.php?css=' . base64_encode($css));
 
     $PAGE->requires->css('/course/format/mosaic/renderer.css');
-    $PAGE->requires->js('/course/format/mosaic/renderer.js?courseid=' . $PAGE->course->id);
+    $PAGE->requires->js('/course/format/mosaic/renderer.js?courseid=' . $PAGE->course->id . '&wwwroot=' . $CFG->wwwroot);
 
     $PAGE->requires->css('/course/format/mosaic/format.css');
 }

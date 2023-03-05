@@ -2,8 +2,6 @@
 // funcao - exibe ou oculta sessao
 // =============================================================================
 
-console.log(document.cookie);
-
 const onChangeSection = (number, action) => {
     const section = document.querySelector(number);
     if (section) {
