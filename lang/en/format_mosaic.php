@@ -2,19 +2,8 @@
 
 $string['section0name'] = 'Geral';
 $string['sectionname'] = 'Mosáico';
-$string['pluginname'] = 'Format mosáico';
-
-$string['addsections'] = 'Add topic';
-$string['currentsection'] = 'This topic';
-$string['editsection'] = 'Edit topic';
-$string['editsectionname'] = 'Edit topic name';
-$string['deletesection'] = 'Delete topic';
-$string['newsectionname'] = 'New name for topic {$a}';
-$string['page-course-view-topics'] = 'Any course main page in topics format';
-$string['page-course-view-topics-x'] = 'Any course page in topics format';
-$string['hidefromothers'] = 'Hide topic';
-$string['showfromothers'] = 'Show topic';
-$string['privacy:metadata'] = 'The Topics format plugin does not store any personal data.';
+$string['pluginname'] = 'Formato Mosáico';
+$string['hidefromothers'] = 'Esconder tópico';
 
 $string['color'] = 'Cor';
 
