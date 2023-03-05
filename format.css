@@ -555,6 +555,10 @@
         top: calc(50% - 130px);
     }
 
+    .mosaic_start a {
+        color: #fff !important;
+    }
+
     .course-content .single-section {
         height: 100%;
         margin: 0;
