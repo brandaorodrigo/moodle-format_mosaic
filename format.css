@@ -345,15 +345,11 @@
     padding: 6px;
 }
 
-.course-content .activitytitle .activityname {
-    width: 90%;
+.course-content .activity-instance {
+    width: 90% !important;
 }
 
 .course-content .activitytitle .activityname a {
-    /*
-    background-color: #111;
-    color: #ffffff;
-    */
     color: #111;
     font-size: 14px;
     margin: 6px 0 6px 0;
