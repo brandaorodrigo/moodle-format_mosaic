@@ -171,13 +171,11 @@
 }
 
 .activity .available_percent {
+    margin: -6px 0 0 0 !important;
+    padding: 0 !important;
     position: absolute !important;
     right: 0 !important;
     top: 8px !important;
-}
-
-.activity .available_percent {
-    padding: 5px 0 0 0 !important;
     width: 30px;
 }
 
