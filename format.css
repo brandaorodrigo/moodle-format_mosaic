@@ -281,12 +281,10 @@
 }
 
 .course-content h4 {
-    border-top: 2px solid #eee;
     cursor: pointer;
     font-size: 14px !important;
     line-height: 30px !important;
     margin: 0 !important;
-    padding: 10px 0 0 0 !important;
 }
 
 .course-content h4:hover {
@@ -391,6 +389,10 @@
 
 .moisaic_activity_enter svg {
     width: 24px;
+}
+
+.activities_sub {
+    margin: 10px 0 40px 0;
 }
 
 /* ========================================================================== */
