@@ -117,7 +117,8 @@
 
 .course-content ul.mosaic {
     margin: 0;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 46px);
+    /* min-height: calc(100vh - 60px); */
     padding: 0;
     position: relative;
     width: 100vw;
@@ -171,12 +172,12 @@
 
 .activity .available_percent {
     position: absolute !important;
-    right: -2px !important;
+    right: 0 !important;
     top: 8px !important;
 }
 
 .activity .available_percent {
-    padding: 0 !important;
+    padding: 5px 0 0 0 !important;
     width: 30px;
 }
 
@@ -236,7 +237,7 @@
 }
 
 #section-0 {
-    background-color: #111;
+    background-color: var(--course-color);
     color: #fefefe;
     overflow: hidden;
 }
@@ -290,6 +291,21 @@
 
 .course-content h4:hover {
     text-decoration: underline;
+}
+
+.course-content h4 .moisaic_subsection_open {
+    float: left;
+    width: 20px;
+    margin: -1px 0 0 0;
+}
+
+.course-content h4 .moisaic_subsection_open svg {
+    width: 14px;
+    transform: rotate(-90deg);
+}
+
+.course-content h4.open .moisaic_subsection_open svg {
+    transform: rotate(0deg);
 }
 
 .course-content .modtype_label:first-child h4 {
@@ -364,7 +380,7 @@
     height: 24px !important;
     padding: 0 !important;
     position: absolute !important;
-    right: 0;
+    right: 4px;
     top: -2px;
     width: 24px !important;
 }
@@ -380,12 +396,14 @@
 .progress_activity {
     fill: var(--course-color);
     float: left;
-    height: 27px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
 }
 
-.progress_activity div {
-    display: inline-block;
+.progress_activity svg {
+    width: 20px;
+    display: block;
+    margin: 0;
 }
 
 .progress_activity.wait {
@@ -473,7 +491,6 @@
     }
 
     #section-0 {
-        background-color: var(--course-color);
         border-bottom: 0;
         border-left: 0;
         border-top: 0;
@@ -557,7 +574,7 @@
     .mosaic_start {
         position: absolute;
         left: 4vw;
-        top: calc(50% - 130px);
+        bottom: calc(50% + 50px);
     }
 
     .course-content .single-section {

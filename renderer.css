@@ -99,6 +99,7 @@ button.close:focus,
 
 .button_back_course svg {
     width: 22px !important;
+    transform: rotate(180deg);
     margin: -2px 5px 0 0 !important;
 }
 

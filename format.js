@@ -29,10 +29,17 @@ const onChangeSection = (number, action) => {
 // =============================================================================
 
 const onChangeSubSection = (number) => {
+    const current = document.querySelector('#activities_sub_' + number);
+    const opened = current?.style?.display === 'block' ? true : false;
+    const list = document.querySelectorAll('.activities_refactor h4');
+    list.forEach((l) => l.classList.remove('open'));
     const all = document.querySelectorAll('.activities_sub');
     all.forEach((a) => (a.style.display = 'none'));
-    const current = document.querySelector('#activities_sub_' + number);
+    if (opened) return;
     if (current) {
+        document
+            .querySelector('#subsection_h4_' + number)
+            .classList.add('open');
         current.style.display = 'block';
         document.cookie = `subsection=${number}; max-age=3600; path=/;`;
     }
@@ -140,14 +147,7 @@ if (courseSection && courseSection.length) {
         if (date && date.innerHTML) {
             const Div = document.createElement('div');
             Div.className = 'available_date';
-            Div.innerHTML =
-                date.innerHTML +
-                `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-                <path d="M32.3,16.8h-2.1v-5.6c0-2.7-1.1-5.3-3-7.3s-4.5-3-7.3-3s-5.3,1.1-7.3,3s-3,4.5-3,7.3v5.6H7.7c-2.8,0-5,2.2-5,5
-                v12.3c0,2.8,2.2,5,5,5h24.7c2.7,0,5-2.2,5-5V21.8C37.3,19,35.1,16.8,32.3,16.8z M12.6,11.2c0-2,0.8-3.8,2.1-5.2S18,3.8,20,3.8
-                s3.8,0.8,5.2,2.1s2.1,3.2,2.1,5.2v5.6H12.6V11.2z M34.4,34.1c0,1.1-0.9,2.1-2.1,2.1H7.7c-1.1,0-2.1-0.9-2.1-2.1V21.8
-                c0-1.1,0.9-2.1,2.1-2.1h24.7c1.1,0,2.1,0.9,2.1,2.1C34.4,21.8,34.4,34.1,34.4,34.1z"/>
-                </svg>`;
+            Div.innerHTML = `${date.innerHTML}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M32.3,16.8h-2.1v-5.6c0-2.7-1.1-5.3-3-7.3s-4.5-3-7.3-3s-5.3,1.1-7.3,3s-3,4.5-3,7.3v5.6H7.7c-2.8,0-5,2.2-5,5v12.3c0,2.8,2.2,5,5,5h24.7c2.7,0,5-2.2,5-5V21.8C37.3,19,35.1,16.8,32.3,16.8z M12.6,11.2c0-2,0.8-3.8,2.1-5.2S18,3.8,20,3.8s3.8,0.8,5.2,2.1s2.1,3.2,2.1,5.2v5.6H12.6V11.2z M34.4,34.1c0,1.1-0.9,2.1-2.1,2.1H7.7c-1.1,0-2.1-0.9-2.1-2.1V21.8c0-1.1,0.9-2.1,2.1-2.1h24.7c1.1,0,2.1,0.9,2.1,2.1C34.4,21.8,34.4,34.1,34.4,34.1z"/></svg>`;
             Header.append(Div);
         }
 
@@ -168,7 +168,7 @@ if (courseSection && courseSection.length) {
                 const Enter = document.createElement('div');
                 Enter.className = 'moisaic_activity_enter';
                 Enter.onclick = () => (location.href = a.href);
-                Enter.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,0C5.37,0,0,5.37,0,12s5.37,12,12,12,12-5.37,12-12S18.63,0,12,0Zm7.92,12.38c-.05,.12-.12,.23-.22,.33l-7,7c-.2,.2-.45,.29-.71,.29s-.51-.1-.71-.29c-.39-.39-.39-1.02,0-1.41l5.29-5.29H5c-.55,0-1-.45-1-1s.45-1,1-1h11.59l-5.29-5.29c-.39-.39-.39-1.02,0-1.41s1.02-.39,1.41,0l7,7c.09,.09,.17,.2,.22,.33,.1,.24,.1,.52,0,.76Z" /></svg>`;
+                Enter.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M45.3,15c-1.2-2.8-2.8-5.2-4.9-7.3c-2.1-2.1-4.5-3.7-7.3-4.9c-2.8-1.2-5.8-1.8-9.1-1.8c-3.3,0-6.3,0.6-9.1,1.8c-2.8,1.2-5.3,2.8-7.3,4.9C5.5,9.7,3.9,12.1,2.7,15c-1.2,2.8-1.8,5.8-1.8,9.1c0,3.3,0.6,6.3,1.8,9.1c1.2,2.8,2.8,5.3,4.9,7.3c2.1,2.1,4.5,3.7,7.3,4.9c2.8,1.2,5.8,1.8,9.1,1.8h0c3.2,0,6.3-0.6,9.1-1.8c2.8-1.2,5.2-2.8,7.3-4.9c2.1-2.1,3.7-4.5,4.9-7.3c1.2-2.8,1.8-5.8,1.8-9.1C47.1,20.8,46.5,17.8,45.3,15z M38.7,24.7c-0.1,0.2-0.2,0.4-0.4,0.6L26.6,37c-0.4,0.4-0.9,0.6-1.4,0.6c-0.5,0-1-0.2-1.4-0.6c-0.4-0.4-0.6-0.8-0.6-1.4c0-0.5,0.2-1,0.6-1.4l8.3-8.4H11.1c-0.6,0-1-0.2-1.4-0.6C9.4,25,9.2,24.6,9.2,24s0.2-1,0.6-1.4c0.4-0.4,0.8-0.6,1.4-0.6h21.1l-8.3-8.4c-0.4-0.4-0.6-0.8-0.6-1.3c0-0.5,0.2-1,0.6-1.4c0.4-0.4,0.8-0.6,1.3-0.6c0.5,0,1,0.2,1.4,0.6l11.6,11.6c0.2,0.2,0.4,0.4,0.5,0.7s0.1,0.5,0.1,0.7S38.8,24.5,38.7,24.7z"/></svg>`;
                 e.appendChild(Enter);
 
                 // =============================================================
@@ -180,7 +180,7 @@ if (courseSection && courseSection.length) {
                     const Div = document.createElement('div');
                     const s = pill.innerHTML.indexOf('Feito:') !== -1;
                     Div.className = 'progress_activity ' + (!s && 'wait');
-                    Div.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M13.2,33.9c-0.4,0-0.8-0.2-1.1-0.4L0.9,22.2c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l10.2,10.2L36.9,6.6C37.5,6,38.5,6,39,6.6c0.6,0.6,0.6,1.5,0,2.1L14.3,33.4C14,33.7,13.6,33.9,13.2,33.9z" /></svg>`;
+                    Div.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M14,33.8c-0.3,0-0.6-0.1-0.9-0.2c-0.3-0.1-0.5-0.3-0.8-0.5L1.6,22.4c-0.5-0.5-0.7-1-0.7-1.7c0-0.7,0.2-1.2,0.7-1.7c0.5-0.5,1-0.7,1.7-0.7c0.6,0,1.2,0.2,1.7,0.7l9,9L35,7c0.5-0.5,1-0.7,1.7-0.7c0.6,0,1.2,0.2,1.7,0.7c0.5,0.5,0.7,1,0.7,1.7c0,0.7-0.2,1.2-0.7,1.7L15.6,33.1c-0.2,0.2-0.5,0.4-0.8,0.5C14.6,33.7,14.3,33.8,14,33.8z" /></svg>`;
                     a.insertBefore(Div, a.firstChild);
                 }
 
@@ -270,8 +270,15 @@ if (courseSection && courseSection.length) {
             List.className = 'activities_refactor';
             each.append(List);
             content.forEach(({ element, child }, index) => {
-                element.querySelector('h4').onclick = () =>
-                    onChangeSubSection(index);
+                const h4 = element.querySelector('h4');
+                h4.id = 'subsection_h4_' + index;
+
+                const Open = document.createElement('div');
+                Open.className = 'moisaic_subsection_open';
+                Open.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M23.8,35.6c-0.5,0-0.8,0-1.2-0.2s-0.8-0.3-1.2-0.7L4.9,18.1C4.2,17.5,4,16.8,4,15.8s0.3-1.7,1-2.3c0.7-0.7,1.5-1,2.3-1c0.8,0.2,1.7,0.5,2.3,1L24,27.7l14.2-14.2c0.7-0.7,1.3-1,2.3-1c1,0,1.7,0.3,2.3,1c0.7,0.7,1,1.3,1,2.3s-0.5,1.7-1,2.3L26.2,34.6c-0.3,0.3-0.7,0.7-1.2,0.7C24.7,35.6,24.3,35.6,23.8,35.6z"/></svg>`;
+                h4.prepend(Open);
+
+                h4.onclick = () => onChangeSubSection(index);
                 List.append(element);
                 const Sub = document.createElement('ul');
                 Sub.className = 'activities_sub';
@@ -298,13 +305,10 @@ if (courseSection && courseSection.length) {
 // =============================================================================
 
 const start = document.querySelector('#mosaic_start');
-if (start) {
-    document.querySelector('#section-0').append(start);
-}
+if (start) document.querySelector('#section-0').append(start);
+
 const squares = document.querySelector('#mosaic_squares');
-if (squares) {
-    document.querySelector('#section-0').append(squares);
-}
+if (squares) document.querySelector('#section-0').append(squares);
 
 // =============================================================================
 // quando carrega a tela verifica se existe cookie de sessao aberta
@@ -318,5 +322,6 @@ const getCookie = (name) => {
 
 const section = getCookie('section');
 if (section) onChangeSection(section, true);
+
 const subsection = getCookie('subsection');
 if (subsection) onChangeSubSection(subsection);
