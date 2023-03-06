@@ -353,7 +353,7 @@
     color: #111;
     font-size: 14px;
     margin: 6px 0 6px 0;
-    padding: 4px 6px;
+    padding: 4px 0;
 }
 
 .description[data-for='sectioninfo'] .course-description-item {
@@ -396,14 +396,13 @@
 .progress_activity {
     fill: var(--course-color);
     float: left;
-    height: 24px;
-    width: 24px;
+    height: 28px;
+    width: 26px;
 }
 
 .progress_activity svg {
-    width: 20px;
+    width: 18px;
     display: block;
-    margin: 0;
 }
 
 .progress_activity.wait {
