@@ -98,9 +98,9 @@ button.close:focus,
 }
 
 .button_back_course svg {
-    width: 22px !important;
-    transform: rotate(180deg);
-    margin: -2px 5px 0 0 !important;
+    width: 21px;
+    margin: -5px 5px 0 0 !important;
+    display: inline-block;
 }
 
 /* ========================================================================== */
