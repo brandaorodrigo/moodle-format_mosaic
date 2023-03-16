@@ -357,7 +357,7 @@
 }
 
 .course-content .activitytitle .activityname a:hover {
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .description[data-for='sectioninfo'] .course-description-item {
