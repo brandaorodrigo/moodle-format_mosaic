@@ -161,7 +161,7 @@
 }
 
 .available_percent .completed {
-    background: #111;
+    background: var(--course-color);
     border-radius: 0 4px 4px 0;
     display: block;
     height: 5px;
@@ -356,6 +356,10 @@
     padding: 4px 0;
 }
 
+.course-content .activitytitle .activityname a:hover {
+    font-weight: bold;
+}
+
 .description[data-for='sectioninfo'] .course-description-item {
     background: none;
     font-size: 14px;
@@ -481,7 +485,7 @@
         height: 50%;
         left: 0;
         overflow: auto;
-        padding: 4% !important;
+        padding: 4% 4% 0 4% !important;
         position: absolute;
         top: 0;
         transition: width 0.4s, height 0.4s;

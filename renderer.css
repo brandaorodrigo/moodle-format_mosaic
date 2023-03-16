@@ -173,14 +173,20 @@ button.close:focus,
 }
 
 /* ========================================================================== */
-
-#page-wrapper #page {
-    margin: 0 !important;
-}
+/* main innner */
+/* ========================================================================== */
 
 #page.drawers #topofscroll #page-content.main-inner #region-main {
     margin: 0 auto !important;
     padding: 0 20px !important;
     width: auto !important;
     max-width: none !important;
+}
+
+/* ========================================================================== */
+/* theme caed */
+/* ========================================================================== */
+
+#page-wrapper #page {
+    margin: 0 !important;
 }

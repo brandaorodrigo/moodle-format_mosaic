@@ -88,10 +88,11 @@ if (!$PAGE->user_is_editing()) {
             background-image: url(<?php echo b64('i_workshop') ?>);
         }
 
+        #section-0 {
+            background-image: url(<?php echo b64('s0') ?>);
+        }
+
         @media (min-width: 960px) {
-            #section-0 {
-                background-image: url(<?php echo b64('s0') ?>);
-            }
 
             #section-1 {
                 background-image: url(<?php echo b64('s1') ?>);
