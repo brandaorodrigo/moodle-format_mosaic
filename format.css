@@ -468,7 +468,7 @@
 
 @media (min-width: 960px) {
     .course-content .course-description-item.summarytext {
-        max-height: 86px;
+        max-height: 96px;
         overflow: auto;
     }
 
