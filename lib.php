@@ -20,6 +20,8 @@ class format_mosaic extends format_topics
         $mosaic = [
             'color',
 
+            'name_module',
+
             'name_start',
             'href_start',
 

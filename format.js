@@ -99,9 +99,11 @@ if (courseSection && courseSection.length) {
         // módulo - numero
         // =====================================================================
 
+        const name = document.querySelector('#name_module').value;
+
         const Div = document.createElement('div');
         Div.className = 'module_badge';
-        Div.innerHTML = 'Modulo ' + modules;
+        Div.innerHTML = name + ' ' + modules;
         each.prepend(Div);
 
         // =====================================================================

@@ -176,5 +176,6 @@ if (!$PAGE->user_is_editing()) {
             <?php endif ?>
         </div>
     </div>
+    <input id="name_module" value="<?php echo $course->name_module ?>" style="display:none" />
 <?php
 }

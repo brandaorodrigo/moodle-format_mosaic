@@ -116,12 +116,13 @@
 }
 
 .course-content ul.mosaic {
-    margin: 0;
+    margin: 0 auto;
     min-height: calc(100vh - 46px);
     /* min-height: calc(100vh - 60px); */
     padding: 0;
     position: relative;
     width: 100vw;
+    max-width: 1920px !important;
 }
 
 .course-content .single-section {
@@ -140,7 +141,8 @@
     display: block;
     float: left;
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 500;
+    line-height: 22px;
     width: 36%;
 }
 
@@ -152,7 +154,7 @@
     background: #f2f2f2;
     border-radius: 4px;
     display: block;
-    height: 5px;
+    height: 4px;
     margin: 0;
     overflow: hidden;
     padding: 0;
@@ -164,7 +166,7 @@
     background: var(--course-color);
     border-radius: 0 4px 4px 0;
     display: block;
-    height: 5px;
+    height: 4px;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -185,7 +187,7 @@
 
 .mosaic_header {
     display: block;
-    height: 25px;
+    height: 32px;
 }
 
 .section-open .mosaic_header {
@@ -217,7 +219,7 @@
     border: 1px solid #111;
     color: #111;
     display: inline-block;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
     line-height: 1;
     margin: 30px 0 0 0;
@@ -267,7 +269,7 @@
     font-size: 19px !important;
     font-weight: 500 !important;
     line-height: 20px !important;
-    margin: 16px 0 0 0 !important;
+    margin: 26px 0 0 0 !important;
     padding: 0 !important;
 }
 
@@ -333,7 +335,7 @@
 
 .course-content div[data-for='sectioninfo'] {
     font-size: 14px;
-    margin: 16px 0 0 0 !important;
+    margin: 24px 0 0 0 !important;
     padding: 0 !important;
 }
 
@@ -436,8 +438,8 @@
     display: none;
     font-size: 14px;
     font-weight: bold;
-    margin: 36px 0 0 0;
-    padding: 6px 22px;
+    margin: 42px 0 0 0;
+    padding: 6px 26px;
 }
 
 .button_enter_section:hover {
@@ -468,8 +470,12 @@
 
 @media (min-width: 960px) {
     .course-content .course-description-item.summarytext {
-        max-height: 96px;
         overflow: auto;
+        line-height: 25px;
+    }
+
+    .course-content .course-description-item.summarytext p {
+        margin: 0;
     }
 
     #section-0 .course-description-item.summarytext {
@@ -485,7 +491,7 @@
         height: 50%;
         left: 0;
         overflow: auto;
-        padding: 4% 4% 0 4% !important;
+        padding: 2.3% 5.8% 0 5.8% !important;
         position: absolute;
         top: 0;
         transition: width 0.4s, height 0.4s;

@@ -7,6 +7,8 @@ $string['hidefromothers'] = 'Esconder tópico';
 
 $string['color'] = 'Cor';
 
+$string['name_module'] = 'Nome dos módulos';
+
 $string['name_start'] = '<strong>Início</strong> texto';
 $string['href_start'] = '<strong>Início</strong> link';
 
