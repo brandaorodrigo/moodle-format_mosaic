@@ -10,12 +10,12 @@ const onChangeSection = (number, action) => {
             section.style.zIndex = 999;
             self.location.hash = number;
             section.classList.add('section-open');
-            ul.classList.add('force-display');
+            if (ul) ul.classList.add('force-display');
             document.cookie = `section=${number}; max-age=3600; path=/;`;
         } else {
             self.location.hash = '';
             section.classList.remove('section-open');
-            ul.classList.remove('force-display');
+            if (ul) ul.classList.remove('force-display');
             setTimeout(() => {
                 section.style.zIndex = 99;
                 document.cookie = `section=undefined; max-age=3600; path=/;`;
@@ -140,20 +140,6 @@ if (courseSection && courseSection.length) {
         }
 
         // =====================================================================
-        // módulo - data de abertura
-        // =====================================================================
-
-        const date = each.querySelector(
-            '.section_availability .availabilityinfo .description-inner strong'
-        );
-        if (date && date.innerHTML) {
-            const Div = document.createElement('div');
-            Div.className = 'available_date';
-            Div.innerHTML = `${date.innerHTML}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M32.3,16.8h-2.1v-5.6c0-2.7-1.1-5.3-3-7.3s-4.5-3-7.3-3s-5.3,1.1-7.3,3s-3,4.5-3,7.3v5.6H7.7c-2.8,0-5,2.2-5,5v12.3c0,2.8,2.2,5,5,5h24.7c2.7,0,5-2.2,5-5V21.8C37.3,19,35.1,16.8,32.3,16.8z M12.6,11.2c0-2,0.8-3.8,2.1-5.2S18,3.8,20,3.8s3.8,0.8,5.2,2.1s2.1,3.2,2.1,5.2v5.6H12.6V11.2z M34.4,34.1c0,1.1-0.9,2.1-2.1,2.1H7.7c-1.1,0-2.1-0.9-2.1-2.1V21.8c0-1.1,0.9-2.1,2.1-2.1h24.7c1.1,0,2.1,0.9,2.1,2.1C34.4,21.8,34.4,34.1,34.4,34.1z"/></svg>`;
-            Header.append(Div);
-        }
-
-        // =====================================================================
         // atividades
         // =====================================================================
 
@@ -202,7 +188,7 @@ if (courseSection && courseSection.length) {
             });
 
             // =================================================================
-            // atividade - botao entrar/sair
+            // módulo - botao entrar e sair
             // =================================================================
 
             const number = each.getAttribute('data-number');
@@ -215,13 +201,13 @@ if (courseSection && courseSection.length) {
                 const Back = document.createElement('button');
                 Back.className = 'button_back_section';
                 Back.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-                <path d="M20.1,0.6C9.3,0.6,0.6,9.3,0.6,20.1s8.7,19.5,19.5,19.5s19.5-8.7,19.5-19.5S30.8,0.6,20.1,0.6z M20.1,36.6
-                c-9.1,0-16.5-7.4-16.5-16.5S11,3.6,20.1,3.6S36.6,11,36.6,20.1S29.2,36.6,20.1,36.6z" />
-                <path d="M26.5,13.6c-0.6-0.6-1.5-0.6-2.1,0l-4.3,4.3l-4.3-4.3c-0.6-0.6-1.5-0.6-2.1,0c-0.6,0.6-0.6,1.5,0,2.1L18,20l-4.3,4.3
-                c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l4.3-4.3l4.3,4.3c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4
-                c0.6-0.6,0.6-1.5,0-2.1L22.2,20l4.3-4.3C27.1,15.1,27.1,14.2,26.5,13.6L26.5,13.6z" />
-                </svg>`;
-                each.append(Back);
+                    <path d="M20.1,0.6C9.3,0.6,0.6,9.3,0.6,20.1s8.7,19.5,19.5,19.5s19.5-8.7,19.5-19.5S30.8,0.6,20.1,0.6z M20.1,36.6
+                    c-9.1,0-16.5-7.4-16.5-16.5S11,3.6,20.1,3.6S36.6,11,36.6,20.1S29.2,36.6,20.1,36.6z" />
+                    <path d="M26.5,13.6c-0.6-0.6-1.5-0.6-2.1,0l-4.3,4.3l-4.3-4.3c-0.6-0.6-1.5-0.6-2.1,0c-0.6,0.6-0.6,1.5,0,2.1L18,20l-4.3,4.3
+                    c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l4.3-4.3l4.3,4.3c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4
+                    c0.6-0.6,0.6-1.5,0-2.1L22.2,20l4.3-4.3C27.1,15.1,27.1,14.2,26.5,13.6L26.5,13.6z" />
+                    </svg>`;
+                Header.append(Back);
 
                 const href = each.querySelector('.sectionname a');
                 if (href) {
@@ -298,6 +284,20 @@ if (courseSection && courseSection.length) {
                     appendActivityPercent(pill, element);
                 }
             });
+        }
+
+        // =====================================================================
+        // módulo - data de abertura
+        // =====================================================================
+
+        const date = each.querySelector(
+            '.section_availability .availabilityinfo .description-inner strong'
+        );
+        if (date && date.innerHTML) {
+            const Div = document.createElement('div');
+            Div.className = 'available_date';
+            Div.innerHTML = `${date.innerHTML}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M32.3,16.8h-2.1v-5.6c0-2.7-1.1-5.3-3-7.3s-4.5-3-7.3-3s-5.3,1.1-7.3,3s-3,4.5-3,7.3v5.6H7.7c-2.8,0-5,2.2-5,5v12.3c0,2.8,2.2,5,5,5h24.7c2.7,0,5-2.2,5-5V21.8C37.3,19,35.1,16.8,32.3,16.8z M12.6,11.2c0-2,0.8-3.8,2.1-5.2S18,3.8,20,3.8s3.8,0.8,5.2,2.1s2.1,3.2,2.1,5.2v5.6H12.6V11.2z M34.4,34.1c0,1.1-0.9,2.1-2.1,2.1H7.7c-1.1,0-2.1-0.9-2.1-2.1V21.8c0-1.1,0.9-2.1,2.1-2.1h24.7c1.1,0,2.1,0.9,2.1,2.1C34.4,21.8,34.4,34.1,34.4,34.1z"/></svg>`;
+            Header.append(Div);
         }
     });
 }
