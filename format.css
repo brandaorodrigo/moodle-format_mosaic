@@ -406,12 +406,13 @@
 .progress_activity {
     fill: var(--course-color);
     float: left;
-    height: 28px;
-    width: 26px;
+    height: 22px;
+    width: 22px;
+    margin-top: 3px;
 }
 
 .progress_activity svg {
-    width: 18px;
+    width: 15px;
     display: block;
 }
 
@@ -568,13 +569,16 @@
     .course-content ul.mosaic li.section.section-open .module_badge {
         font-size: 17px;
         margin-top: 6% !important;
+        color: #555;
+        border: 0;
+        padding: 0;
     }
 
     .course-content ul.mosaic li.section.section-open h3 {
         font-size: 24px !important;
         line-height: 34px !important;
         font-weight: 800 !important;
-        margin-top: 13px !important;
+        margin-top: 23px !important;
     }
 
     .course-content
