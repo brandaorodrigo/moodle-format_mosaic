@@ -126,7 +126,7 @@
     padding: 0;
     position: relative;
     width: 100vw;
-    max-width: 1920px !important;
+    /* max-width: 1920px !important; */
 }
 
 .course-content .single-section {
@@ -135,6 +135,10 @@
 
 #page-course-view-mosaic div[role='main'] {
     padding: 0 !important;
+}
+
+.content.course-content-item-content.collapse:not(.show) {
+    display: block !important;
 }
 
 /* ========================================================================== */
