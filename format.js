@@ -10,11 +10,13 @@ const onChangeSection = (number, action) => {
             section.style.zIndex = 999;
             self.location.hash = number;
             section.classList.add('section-open');
+            section.classList.remove('minify');
             if (ul) ul.classList.add('force-display');
             document.cookie = `section=${number}; max-age=3600; path=/;`;
         } else {
             self.location.hash = '';
             section.classList.remove('section-open');
+            section.classList.add('minify');
             if (ul) ul.classList.remove('force-display');
             setTimeout(() => {
                 section.style.zIndex = 99;
