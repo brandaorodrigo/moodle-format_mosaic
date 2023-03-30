@@ -80,8 +80,9 @@ class format_mosaic extends format_topics
         $courseconfig = get_config('moodlecourse');
         foreach ($mosaic as $m) {
             $help = null;
-            if (stristr($m, 'base64_q')) $help = 'size_q';
-            if (stristr($m, 'base64_s')) $help = 'size_s';
+            if (stristr($m, 'base64_q')) $help = 'size_s';
+            if (stristr($m, 'base64_s') && !stristr($m, '_full')) $help = 'size_m';
+            if (stristr($m, 'base64_s') && stristr($m, '_full')) $help = 'size_l';
             if (stristr($m, 'base64_i')) $help = 'size_i';
             $parent[$m] = [
                 'default' => @$courseconfig->{$m} ?: null,

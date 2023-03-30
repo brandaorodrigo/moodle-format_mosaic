@@ -62,9 +62,12 @@ $string['base64_i_workshop'] = '<strong>Icone</strong> Laboratório de avaliaç�
 
 $string['css_extra'] = '<strong>CSS</strong> extra';
 
-$string['size_q'] = 'Tamanho da imagem';
-$string['size_s'] = 'Tamanho da imagem';
-$string['size_i'] = 'Tamanho da imagem';
-$string['size_q_help'] = 'Tamanho 400x400';
-$string['size_s_help'] = 'Tamanho 800x800';
-$string['size_i_help'] = 'Tamanho 32x32';
+$string['size_s'] = 'Tamanho: 426 x 311 px';
+$string['size_m'] = 'Tamanho: 853 x 622 px';
+$string['size_l'] = 'Tamanho: 1706 x 1243 px';
+$string['size_i'] = 'Tamanho: 42 x 42 px ';
+
+$string['size_s_help'] = 'Tamanho: 426 x 311 px';
+$string['size_m_help'] = 'Tamanho: 853 x 622 px';
+$string['size_l_help'] = 'Tamanho: 1706 x 1243 px';
+$string['size_i_help'] = 'Tamanho: 42 x 42 px ';
