@@ -1,8 +1,8 @@
 <?php
 
 $string['section0name'] = 'Geral';
-$string['sectionname'] = 'Mosáico';
-$string['pluginname'] = 'Formato Mosáico';
+$string['sectionname'] = 'Mosaico';
+$string['pluginname'] = 'Formato Mosaico';
 $string['hidefromothers'] = 'Esconder tópico';
 
 $string['color'] = 'Cor';
@@ -61,3 +61,10 @@ $string['base64_i_wiki'] = '<strong>Icone</strong> Wiki';
 $string['base64_i_workshop'] = '<strong>Icone</strong> Laboratório de avaliação';
 
 $string['css_extra'] = '<strong>CSS</strong> extra';
+
+$string['size_q'] = 'Tamanho da imagem';
+$string['size_s'] = 'Tamanho da imagem';
+$string['size_i'] = 'Tamanho da imagem';
+$string['size_q_help'] = 'Tamanho 400x400';
+$string['size_s_help'] = 'Tamanho 800x800';
+$string['size_i_help'] = 'Tamanho 32x32';

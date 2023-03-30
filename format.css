@@ -51,7 +51,7 @@
 
 .squares .square a {
     color: #111;
-    font-size: 14px !important;
+    font-size: 16px !important;
     font-weight: bold;
     margin: 0;
     padding: 0;
@@ -85,6 +85,12 @@
     margin-top: 36px;
 }
 
+.mosaic_start:hover,
+.mosaic_start:active,
+.mosaic_start:focus {
+    background: none !important;
+}
+
 .mosaic_start a {
     color: #fff !important;
     fill: #fff;
@@ -92,8 +98,9 @@
     font-weight: bold;
 }
 
-.mosaic_start focus:hover,
-.mosaic_start active:hover {
+.mosaic_start a:hover,
+.mosaic_start a:active,
+.mosaic_start a:focus {
     background: none !important;
 }
 
@@ -290,7 +297,7 @@
 
 .course-content h4 {
     cursor: pointer;
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 30px !important;
     margin: 0 !important;
 }
@@ -306,7 +313,7 @@
 }
 
 .course-content h4 .moisaic_subsection_open svg {
-    width: 14px;
+    width: 16px;
     transform: rotate(-90deg);
 }
 
@@ -331,7 +338,7 @@
 .course-content .activity-item.activityinline,
 .course-content .activity-item:not(.activityinline) {
     border: 0 !important;
-    font-size: 14px !important;
+    font-size: 16px !important;
     margin: 11px 0 0 0 !important;
     padding: 0 !important;
 }
@@ -342,7 +349,8 @@
 }
 
 .course-content div[data-for='sectioninfo'] {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 300;
     margin: 24px 0 0 0 !important;
     padding: 0 !important;
 }
@@ -361,7 +369,7 @@
 
 .course-content .activitytitle .activityname a {
     color: #111;
-    font-size: 14px;
+    font-size: 16px;
     margin: 6px 0 6px 0;
     padding: 4px 0;
 }
@@ -372,7 +380,7 @@
 
 .description[data-for='sectioninfo'] .course-description-item {
     background: none;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0 !important;
     padding: 0 !important;
 }
@@ -445,9 +453,11 @@
     border: 0;
     color: #fefefe;
     display: none;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
-    margin: 42px 0 0 0;
+    position: absolute;
+    left: 17.5%;
+    bottom: 14%;
     padding: 6px 26px;
 }
 
@@ -498,7 +508,7 @@
         height: 50.1%;
         left: 0;
         overflow: auto;
-        padding: 2.3% 5.8% !important;
+        padding: 2.3% 5.8% 0 5.8% !important;
         position: absolute;
         top: 0;
         transition: width 0.4s, height 0.4s;
@@ -616,7 +626,7 @@
 
     .mosaic_start {
         position: absolute;
-        left: 4vw;
+        left: 18%;
         bottom: calc(50% + 50px);
     }
 

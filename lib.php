@@ -79,10 +79,16 @@ class format_mosaic extends format_topics
         $parent = parent::course_format_options($foreditform);
         $courseconfig = get_config('moodlecourse');
         foreach ($mosaic as $m) {
+            $help = null;
+            if (stristr($m, 'base64_q')) $help = 'size_q';
+            if (stristr($m, 'base64_s')) $help = 'size_s';
+            if (stristr($m, 'base64_i')) $help = 'size_i';
             $parent[$m] = [
                 'default' => @$courseconfig->{$m} ?: null,
                 'type' => PARAM_TEXT,
                 'label' => get_string($m, 'format_mosaic'),
+                'help' => $help,
+                'help_component' => 'format_mosaic',
                 'element_type' => stristr($m, 'css') ? 'textarea' : 'text',
             ];
         }
