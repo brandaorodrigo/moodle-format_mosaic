@@ -653,6 +653,14 @@
         animation-delay: 0.9s;
     }
 
+    .course-content ul.mosaic li.section.section-open ul.section {
+        opacity: 0;
+        animation-name: fade;
+        animation-fill-mode: forwards;
+        animation-duration: 0.8s;
+        animation-delay: 0.9s;
+    }
+
     .course-content .single-section .course-section {
         height: 100% !important;
         left: 33.333% !important;
