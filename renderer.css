@@ -189,4 +189,5 @@ button.close:focus,
 
 #page-wrapper #page {
     margin: 0 !important;
+    position: relative;
 }

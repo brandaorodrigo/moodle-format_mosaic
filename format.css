@@ -115,10 +115,6 @@
     padding: 0 !important;
 }
 
-.course-content {
-    background-color: #111;
-}
-
 .course-content ul.mosaic {
     margin: 0 auto;
     min-height: calc(100vh - 46px);
