@@ -255,6 +255,7 @@
     background-color: var(--course-color);
     color: #fefefe;
     overflow: hidden;
+    background-size: 100% 50% !important;
 }
 
 #section-0 [data-for='cmlist'] {
@@ -291,7 +292,6 @@
 .course-content #section-0 h3 {
     font-size: 45px !important;
     font-weight: 700 !important;
-    letter-spacing: -1.5px;
     line-height: 48px !important;
 }
 
