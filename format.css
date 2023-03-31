@@ -41,7 +41,7 @@
 .squares .square {
     align-items: center;
     background-repeat: no-repeat !important;
-    background-size: 100% 100% !important;
+    background-size: cover !important;
     display: flex;
     height: 50%;
     position: absolute;
@@ -263,7 +263,8 @@
     background-color: var(--course-color);
     color: #fefefe;
     overflow: hidden;
-    background-size: 100% 50% !important;
+    background-size: cover;
+    background-position: top !important;
 }
 
 #section-0 [data-for='cmlist'] {
@@ -386,7 +387,7 @@
 .course-content .activitytitle .activityname a:focus,
 .course-content .activitytitle .activityname a:active {
     font-weight: bold !important;
-    background-color: none !important;
+    background: none !important;
 }
 
 .description[data-for='sectioninfo'] .course-description-item {
@@ -513,7 +514,7 @@
 /* layout desktop */
 /* ========================================================================== */
 
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
     .course-content .course-description-item.summarytext {
         overflow: auto;
         line-height: 25px;
@@ -529,7 +530,8 @@
 
     .course-content ul.mosaic li.section {
         background-repeat: no-repeat !important;
-        background-size: 100% 100% !important;
+        background-size: cover !important;
+        background-position: bottom !important;
         background: #fff;
         border: 1px solid #f8f8f8;
         display: block;
