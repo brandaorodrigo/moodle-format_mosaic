@@ -299,9 +299,11 @@
 }
 
 .course-content #section-0 h3 {
-    font-size: 45px !important;
+    font-size: 42px !important;
     font-weight: 700 !important;
     line-height: 48px !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .course-content h4 {
@@ -551,7 +553,12 @@
         border-left: 0;
         border-top: 0;
         height: 100%;
-        padding: 80px 6% 0 6% !important;
+        padding: 4% !important;
+    }
+
+    .course-content #section-0 h3 {
+        font-size: 34px !important;
+        line-height: 40px !important;
     }
 
     #section-1 {
@@ -679,7 +686,7 @@
 
     .mosaic_start {
         position: absolute;
-        left: 18%;
+        left: 12%;
         bottom: calc(50% + 50px);
     }
 
@@ -745,5 +752,26 @@
 
     #page-course-view-mosaic #page-content {
         padding: 0 !important;
+    }
+}
+
+@media (min-width: 1600px) {
+    #section-0 {
+        border-bottom: 0;
+        border-left: 0;
+        border-top: 0;
+        height: 100%;
+        padding: 6% !important;
+    }
+
+    .course-content #section-0 h3 {
+        font-size: 42px !important;
+        line-height: 48px !important;
+    }
+
+    .mosaic_start {
+        position: absolute;
+        left: 18%;
+        bottom: calc(50% + 50px);
     }
 }
