@@ -255,8 +255,8 @@
     opacity: 0;
     animation-name: fade;
     animation-fill-mode: forwards;
-    animation-duration: 0.4s;
-    animation-delay: 0.4s;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
 }
 
 #section-0 {
@@ -402,16 +402,12 @@
     border: 0 !important;
 }
 
-.course-content
-    ul.mosaic
-    li.section.minify
-    .description[data-for='sectioninfo']
-    .course-description-item {
+.course-content ul.mosaic li.section.minify .course-description-item {
     opacity: 0;
     animation-name: fade;
     animation-fill-mode: forwards;
-    animation-duration: 0.4s;
-    animation-delay: 0.4s;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
 }
 
 .moisaic_activity_enter {
