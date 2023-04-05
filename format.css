@@ -59,6 +59,12 @@
     width: 100%;
 }
 
+.squares .square a:hover,
+.squares .square a:active,
+.squares .square a:focus {
+    background: none !important;
+}
+
 .squares .square:nth-child(1) {
     background-color: #00000006;
     left: 0;
